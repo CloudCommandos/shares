@@ -12,14 +12,13 @@ sudo apt install ansible
 ## 2. Access Ansible Host
 ### 2.1 For Windows PC
 1. Install software PuTTY  
-   ![PuTTY Logo](./images/PuTTY.jpg) =150x100
-
+   <img src="images/PuTTY.jpg" width="150">
 1. Run PuTTY and start a session with the following settings:  
    *  Host Name: 111.223.106.169
    *  Port: 20210
    *  Connection type: SSH
 
-   ![PuTTY Session Screenshot](./images/PuTTY_Interface.jpg) =350x342
+   <img src="images/PuTTY_Interface.jpg" width="350">
 
 1. In the Terminal that appears, login using the following credentials (replace 'X' with the number assigned to you):
    *  Username: userX
