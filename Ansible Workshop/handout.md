@@ -16,7 +16,7 @@ sudo apt install ansible
 
 <div style="page-break-after: always;"></div>
 
-## 2. Access Ansible Host Remotely
+## 2. Access Ansible Control Node Remotely
 ### 2.1 For Windows PC
 1. Install software PuTTY  
 
