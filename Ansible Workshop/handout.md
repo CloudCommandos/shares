@@ -44,10 +44,12 @@ sudo apt install ansible
    ```bash
    sudo apt update
    ```
+
 1. Install OpenSSH server
    ```bash
    sudo apt install openssh-server
    ```
+
 1. SSH to the target VM (replace 'X' with the number assigned to you)  
    Password is the same as the username.
    ```bash
