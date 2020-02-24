@@ -20,41 +20,45 @@ sudo apt install ansible
 ### 2.1 For Windows PC
 1. Install software PuTTY  
 
-   <img src="images/PuTTY.jpg" width="150">
+    <img src="images/PuTTY.jpg" width="150">
 
 1. Run PuTTY and start a session with the following settings:  
 
-   *  Host Name: 111.223.106.169
+    *  Host Name: 111.223.106.169
 
-   *  Port: 20210
+    *  Port: 20210
 
-   *  Connection type: SSH  
+    *  Connection type: SSH  
 
-      <img src="images/PuTTY_Interface.jpg" width="350">
+    <img src="images/PuTTY_Interface.jpg" width="350">
 
 1. In the Terminal that appears, login using the following credentials (replace 'X' with the number assigned to you):
 
-   *  Username: userX
+    *  Username: userX
 
-   *  Password: userX
+    *  Password: userX
 
 ### 2.2 For Ubuntu/Debian PC
 1. Access the command console
+
 1. Update Package list
-   ```bash
-   sudo apt update
-   ```
+
+    ```bash
+    sudo apt update
+    ```
 
 1. Install OpenSSH server
-   ```bash
-   sudo apt install openssh-server
-   ```
 
-1. SSH to the target VM (replace 'X' with the number assigned to you)  
-   Password is the same as the username.
-   ```bash
-   ssh userX@111.223.106.169 -p 20210
-   ```
+    ```bash
+    sudo apt install openssh-server
+    ```
+
+1. SSH to the target VM (replace 'X' with the number assigned to you). Password is the same as the username.
+
+    ```bash
+    ssh userX@111.223.106.169 -p 20210
+    ```
+
 
 
 <div style="page-break-after: always;"></div>
@@ -103,4 +107,14 @@ To save your file when inside the editor: `CTRL` + `o`, then `ENTER`
 To exit the editor: `CTRL` + `x`  
 ```bash
 nano your_file_name
+```
+
+Access target server remotely through SSH protocol
+```bash
+ssh <username>@<target_ip> -p <port_number(default is 22)>
+```
+
+Terminate your current user's session
+```bash
+exit
 ```
