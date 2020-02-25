@@ -67,23 +67,23 @@ sudo apt install ansible
 Before the start of the hands-on exercise, run the following command to create a directory to work in:
 
 ```
-mkdir ansible-workshop
-cd ansible-workshop
+mkdir /home/userX/ansible-workshop
+cd /home/userX/ansible-workshop
 ```
 
 ### 3.1 Exercise 1 - Introduction to Playbook
 #### Part One - Basic Introduction
-1. Create a directory for the first exercise
+1. Create the directory for exercise 1
 
     ``` 
     mkdir -p ex-1/playbooks
     cd ex-1/playbooks
     ```
     
-1. Create the ansible script in the playbooks directory for part one of the exercise
+1. Create the ansible script for part one of exercise 1
     
     ```
-    nano first-task-part-one.yaml
+    nano exercise-1-part-one.yaml
     ```
     
     And fill in the file with the following information
@@ -108,29 +108,36 @@ cd ansible-workshop
     ```
     
     Once everything is filled up, save the file by pressing `ctrl-x` then `y` for yes and lastly `enter`.
+    
 1. Create the ansible host file for the task
+
     ```
     nano inventory.yaml
     ```
+    
     Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
+    
     ```
     targetnodeX
     or
     10.0.1.21X
     ```
+    
 1. To run the ansible script, use the following command:
+
     ```
-    ansible-playbook -ki inventory.yaml first-task-part-one.yaml
+    ansible-playbook -ki inventory.yaml exercise-1-part-one.yaml
     ```
+    
     -k : prompt user to input ssh password
     
     -i : to pass in the inventory file
 
 #### Part Two - Introduction to Roles & Tags
-1. Create the ansible script in the playbooks directory for part two of the exercise
+1. Create the ansible script for part two of exercise 1
     
     ```
-    nano first-task-part-two.yaml
+    nano exercise-1-part-two.yaml
     ```
     
     And fill in the file with the following information
@@ -162,7 +169,7 @@ cd ansible-workshop
     mkdir -p roles/task-3/tasks
     ```
 
-1. Create a `main.yaml` file in the task folder
+1. Create the `main.yaml` file in the task folder
     
     ```
     nano roles/task-1/tasks/main.yaml
@@ -181,8 +188,9 @@ cd ansible-workshop
 1. To run the ansible script, use the following command:
     
     ```
-    ansible-playbook -ki inventory.yaml first-task-part-one.yaml --skip-tags=task-2
+    ansible-playbook -ki inventory.yaml exercise-1-part-two.yaml --skip-tags=task-2
     ```
+    
     --skip-tags : skip the task with the tag specified
     
     --tags: run the task with the tag specified
@@ -193,6 +201,128 @@ cd ansible-workshop
 ### 3.3 Exercise 3 - Privilege Escalation
 
 ### 3.4 Exercise 4 - Target Control
+1. Return back to `ansible-workshop` directory
+
+    ```
+    cd /home/userX/ansible-workshop
+    ```
+
+1. Create a directory for exercise 4
+
+    ``` 
+    mkdir -p ex-4/playbooks
+    cd ex-4/playbooks
+    ```
+    
+1. Create the ansible script for exercise 4
+    
+    ```
+    nano exercise-4.yaml
+    ```
+    
+    And fill in the file with the following information
+    
+    ```
+    - name: First script to target only one managed node
+      hosts:
+        managed_node
+      roles:
+        - role: get-disk-usage
+        - role: get-block-devices
+      tags: managed_node
+
+    - name: Second script to target both the managed node & localhost
+      hosts:
+        all_node
+      roles:
+        - role: get-disk-usage
+        - role: get-block-devices
+      tags: all_node
+    ```
+    
+1. Create the ansible host file for the task
+
+    ```
+    nano inventory.yaml
+    ```
+    
+    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
+    
+    ```
+    [managed_node]
+    targetnode1
+
+    [all_node]
+    targetnode1
+    localhost
+    ```
+    
+1. Create the roles directory
+    
+    ```
+    mkdir roles
+    ```
+    
+1. Create the task folders in the roles directory
+
+    ```
+    mkdir -p roles/get-disk-usage/tasks
+    mkdir -p roles/get-block-devices/tasks
+    ```
+
+1. Create the `main.yaml` file for both tasks
+    
+    For get-disk-usage task:
+    
+    ```
+    nano roles/get-disk-usage/tasks/main.yaml
+    ```
+    
+    Fill in the `main.yaml` file of get-disk-usage task with the following script
+    
+    ```
+    - name: Get disk usage data
+      shell: "df -h"
+      register: DiskUsageData
+
+    - name: Print disk usage data
+      debug:
+        msg: "{{DiskUsageData.stdout_lines}}"
+    ```
+    
+    For get-block-devices task:
+    
+    ```
+    nano roles/get-block-devices/tasks/main.yaml
+    ```
+
+    Fill in the `main.yaml` file of `get-block-devices` task with the following script
+    
+    ```
+    - name: Get block devices data
+      shell: "lsblk"
+      register: BlockDeviceData
+
+    - name: Print block devices data
+      debug:
+        msg: "{{BlockDeviceData.stdout_lines}}"
+    ```
+      
+1. To run the ansible script, use the following command:
+    
+    Run the script to only target the managed node:
+    
+    ```
+    ansible-playbook -ki inventory.yaml exercise-4.yaml --tags=managed_node
+    ```
+    
+    Run the script to target both the managed node & control node:
+    
+    ```
+    ansible-playbook -ki inventory.yaml exercise-4.yaml --tags=all_node
+    ```
+
+
 
 
 <div style="page-break-after: always;"></div>
