@@ -63,14 +63,136 @@ sudo apt install ansible
 
 <div style="page-break-after: always;"></div>
 
-## 3. Hands-On Tasks
-### 3.1 Task 1 - Introduction to Playbook
+## 3. Hands-On Exercises
+Before the start of the hands-on exercise, run the following command to create a directory to work in:
 
-### 3.2 Task 2 - Using Variables
+```
+mkdir ansible-workshop
+cd ansible-workshop
+```
 
-### 3.3 Task 3 - Privilege Escalation
+### 3.1 Exercise 1 - Introduction to Playbook
+#### Part One - Basic Introduction
+1. Create a directory for the first exercise
 
-### 3.4 Task 4 - Target Control
+    ``` 
+    mkdir -p ex-1/playbooks
+    cd ex-1/playbooks
+    ```
+    
+1. Create the ansible script in the playbooks directory for part one of the exercise
+    
+    ```
+    nano first-task-part-one.yaml
+    ```
+    
+    And fill in the file with the following information
+    
+    ```
+    - name: Ansible Familiarization
+      hosts:
+        targetnodeX
+
+      tasks:
+        - name: Print Task 1
+          debug:
+            msg: "This is Task 1"
+
+        - name: Print Task 2
+          debug:
+            msg: "This is Task 2"
+
+        - name: Print Task 3
+          debug:
+            msg: "This is Task 3"
+    ```
+    
+    Once everything is filled up, save the file by pressing `ctrl-x` then `y` for yes and lastly `enter`.
+1. Create the ansible host file for the task
+    ```
+    nano inventory.yaml
+    ```
+    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
+    ```
+    targetnodeX
+    or
+    10.0.1.21X
+    ```
+1. To run the ansible script, use the following command:
+    ```
+    ansible-playbook -ki inventory.yaml first-task-part-one.yaml
+    ```
+    -k : prompt user to input ssh password
+    
+    -i : to pass in the inventory file
+
+#### Part Two - Introduction to Roles & Tags
+1. Create the ansible script in the playbooks directory for part two of the exercise
+    
+    ```
+    nano first-task-part-two.yaml
+    ```
+    
+    And fill in the file with the following information
+    
+    ```
+    - name: Ansible Familiarization
+      hosts:
+        targetnodeX
+      roles:
+        - role: task-1
+          tags: task-1
+        - role: task-2
+          tags: task-2
+        - role: task-3
+          tags: task-3
+    ```
+    
+1. Create the roles directory
+
+    ```
+    mkdir roles
+    ```
+    
+1. Create the task folder in the roles directory
+
+    ```
+    mkdir -p roles/task-1/tasks
+    mkdir -p roles/task-2/tasks
+    mkdir -p roles/task-3/tasks
+    ```
+
+1. Create a `main.yaml` file in the task folder
+    
+    ```
+    nano roles/task-1/tasks/main.yaml
+    ```
+    
+    Fill in the `main.yaml` file with the following script
+    
+    ```
+    - name: Print Task 1
+      debug:
+        msg: "This is Task 1"
+    ```
+
+    Repeat this step for task-2 & task-3, replacing the number as required
+
+1. To run the ansible script, use the following command:
+    
+    ```
+    ansible-playbook -ki inventory.yaml first-task-part-one.yaml --skip-tags=task-2
+    ```
+    --skip-tags : skip the task with the tag specified
+    
+    --tags: run the task with the tag specified
+    
+
+### 3.2 Exercise 2 - Using Variables
+
+### 3.3 Exercise 3 - Privilege Escalation
+
+### 3.4 Exercise 4 - Target Control
 
 
 <div style="page-break-after: always;"></div>
