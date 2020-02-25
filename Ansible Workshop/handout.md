@@ -86,7 +86,7 @@ cd /home/userX/ansible-workshop
     nano exercise-1-part-one.yaml
     ```
     
-    And fill in the file with the following information
+    And fill in the file with the following script
     
     ```
     - name: Ansible Familiarization
@@ -140,7 +140,7 @@ cd /home/userX/ansible-workshop
     nano exercise-1-part-two.yaml
     ```
     
-    And fill in the file with the following information
+    And fill in the file with the following script
     
     ```
     - name: Ansible Familiarization
@@ -197,6 +197,123 @@ cd /home/userX/ansible-workshop
     
 
 ### 3.2 Exercise 2 - Using Variables
+1. Return back to `ansible-workshop` directory
+
+    ```
+    cd /home/userX/ansible-workshop
+    ```
+
+1. Create a directory for exercise 2
+
+    ``` 
+    mkdir -p ex-2/playbooks
+    cd ex-2/playbooks
+    ```
+    
+1. Create the ansible script for exercise 2
+    
+    ```
+    nano exercise-2.yaml
+    ```
+    
+    And fill in the file with the following script
+    
+    ```
+    - name: Write a playbook to output variables declared in group_vars folder
+      hosts:
+        managed_node
+      roles:
+        - role: single-variable
+        - role: multiple-variable
+    ```
+    
+1. Create the ansible host file for the task
+
+    ```
+    nano inventory.yaml
+    ```
+    
+    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
+    
+    ```
+    [managed_node]
+    targetnodeX
+    ```
+    
+1. Create the roles directory
+    
+    ```
+    mkdir roles
+    ```
+    
+1. Create the task folders in the roles directory
+
+    ```
+    mkdir -p roles/single-variable/tasks
+    mkdir -p roles/multiple-variable/tasks
+    ```
+
+1. Create the `main.yaml` file for both tasks
+    
+    For single-variable task:
+    
+    ```
+    nano roles/single-variable/tasks/main.yaml
+    ```
+    
+    Fill in the `main.yaml` file of single-variable task with the following script
+    
+    ```
+    - name: Printing single variable from group_vars folder
+      debug:
+        msg: "Required to install '{{required_package}}' module"
+    ```
+
+    For multiple-variable task:
+    
+    ```
+    nano roles/multiple-variable/tasks/main.yaml
+    ```
+    
+    Fill in the `main.yaml` file of multiple-variable task with the following script
+    
+    ```
+    - name: Printing single variable from group_vars folder
+      debug:
+        msg: "Already installed {{item}} module"
+      loop: "{{installed_package}}"
+    ```
+    
+1. Create the variable file
+    
+    First create the group variable directory
+    
+    ```
+    mkdir group_vars
+    ```
+    
+    Next create the variable file
+    
+    ```
+    nano group_vars/all.yaml
+    ```
+    
+    Fill in the `all.yaml` files with the following variables
+    
+    ```
+    required_package: openssh-server
+
+    installed_package:
+      - openssh-client
+      - vim
+      - python3
+    ```
+  
+1. To run the ansible script, use the following command:
+
+    ```
+    ansible-playbook -ki inventory.yaml exercise-2.yaml
+    ```
 
 ### 3.3 Exercise 3 - Privilege Escalation
 
@@ -220,7 +337,7 @@ cd /home/userX/ansible-workshop
     nano exercise-4.yaml
     ```
     
-    And fill in the file with the following information
+    And fill in the file with the following script
     
     ```
     - name: First script to target only one managed node
@@ -250,10 +367,10 @@ cd /home/userX/ansible-workshop
     
     ```
     [managed_node]
-    targetnode1
+    targetnodeX
 
     [all_node]
-    targetnode1
+    targetnodeX
     localhost
     ```
     
