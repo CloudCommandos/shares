@@ -71,7 +71,7 @@ mkdir /home/userX/ansible-workshop
 cd /home/userX/ansible-workshop
 ```
 
-### 3.1 Exercise 1 - Introduction to Playbook
+### Exercise 1 - Introduction to Playbook
 #### Part One - Basic Introduction
 1. Create the directory for exercise 1
 
@@ -196,7 +196,7 @@ cd /home/userX/ansible-workshop
     --tags: run the task with the tag specified
     
 
-### 3.2 Exercise 2 - Using Variables
+### Exercise 2 - Using Variables
 1. Return back to `ansible-workshop` directory
 
     ```
@@ -315,9 +315,93 @@ cd /home/userX/ansible-workshop
     ansible-playbook -ki inventory.yaml exercise-2.yaml
     ```
 
-### 3.3 Exercise 3 - Privilege Escalation
+### Exercise 3 - Privilege Escalation
+1. Return back to `ansible-workshop` directory
 
-### 3.4 Exercise 4 - Target Control
+    ```
+    cd /home/userX/ansible-workshop
+    ```
+
+1. Create a directory for exercise 4
+
+    ``` 
+    mkdir -p ex-3/playbooks
+    cd ex-3/playbooks
+    ```
+    
+1. Create the ansible script for exercise 4
+    
+    ```
+    nano exercise-3.yaml
+    ```
+    
+    And fill in the file with the following script
+    
+    ```
+    - name: Install packages
+      hosts:
+        managed_node
+      become: yes
+
+      roles:
+        - role: installpackage
+          tags: installpackage
+    ```
+    
+1. Create the ansible host file for the task
+
+    ```
+    nano inventory.yaml
+    ```
+    
+    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
+    
+    ```
+    [managed_node]
+    targetnodeX
+    ```
+    
+1. Create the roles directory
+    
+    ```
+    mkdir roles
+    ```
+    
+1. Create the task folders in the roles directory
+
+    ```
+    mkdir -p roles/installpackage/tasks
+    ```
+
+1. Create the `main.yaml` file
+    
+    ```
+    nano roles/installpackage/tasks/main.yaml
+    ```
+    
+    Fill in the `main.yaml` file of installpackage task with the following script
+    
+    ```
+    - name: Install nginx package
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start nginx service
+      service:
+        name: nginx
+        state: started
+    ```
+      
+1. To run the ansible script, use the following command:
+    
+    Run the script to only target the managed node:
+    
+    ```
+    ansible-playbook -ki inventory.yaml exercise-3.yaml
+    ```
+
+### Exercise 4 - Target Control
 1. Return back to `ansible-workshop` directory
 
     ```
