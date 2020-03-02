@@ -64,32 +64,40 @@ sudo apt install ansible
 <div style="page-break-after: always;"></div>
 
 ## 3. Hands-On Exercises
-Before the start of the hands-on exercise, run the following command to create a directory to work in:
+Before the start of the hands-on exercise, run the following command to create the `ansible-workshop` directory to work in (Replace 'X' with the number assigned to you):
 
 ```
 mkdir /home/userX/ansible-workshop
 cd /home/userX/ansible-workshop
 ```
 
-### Exercise 1 - Introduction to Playbook
+### Exercise 1 - Introduction to Ansible
 #### Part One - Basic Introduction
-1. Create the directory for exercise 1
+1. Create the `playbooks` directory 
 
     ``` 
-    mkdir -p ex-1/playbooks
-    cd ex-1/playbooks
+    mkdir playbooks
+    cd playbooks
     ```
     
-1. Create the ansible script for part one of exercise 1
+1. Create the main ansible script file to store all exercise task
     
     ```
-    nano exercise-1-part-one.yaml
+    touch main-script.yaml
     ```
     
-    And fill in the file with the following script
+1. Create exercise 1 part 1 task in `main-script.yaml`
+
+    Open `main-script.yaml` file for editing
     
     ```
-    - name: Ansible Familiarization
+    nano main-script.yaml
+    ```
+    
+    Copy task script for exercise 1 part 1 into `main-script.yaml` (Replace 'X' with the number assigned to you)
+    
+    ```
+    - name: Exercise 1 Part 1 - Introduction to Ansible
       hosts:
         targetnodeX
 
@@ -126,7 +134,7 @@ cd /home/userX/ansible-workshop
 1. To run the ansible script, use the following command:
 
     ```
-    ansible-playbook -ki inventory.yaml exercise-1-part-one.yaml
+    ansible-playbook -ki inventory.yaml main-script.yaml
     ```
     
     -k : prompt user to input ssh password
@@ -134,34 +142,40 @@ cd /home/userX/ansible-workshop
     -i : to pass in the inventory file
 
 #### Part Two - Introduction to Roles & Tags
-1. Create the ansible script for part two of exercise 1
+1. Create exercise 1 part 2 task in `main-script.yaml`
     
     ```
-    nano exercise-1-part-two.yaml
+    nano main-script.yaml
     ```
     
-    And fill in the file with the following script
+    Copy task script for exercise 1 part 2 into `main-script.yaml`, add this script below exercise 1 part 1 task (Replace 'X' with the number assigned to you)
     
     ```
-    - name: Ansible Familiarization
+    - name: Exercise 1 Part 2 - Introduction to roles & tags
       hosts:
         targetnodeX
       roles:
         - role: task-1
-          tags: task-1
         - role: task-2
-          tags: task-2
         - role: task-3
-          tags: task-3
+      tags: ex-1-2
     ```
     
-1. Create the roles directory
+    Also add in the following tag at the end of exercise 1 part 1 task (take note of the spacing)
+    
+    ```
+    tags: ex-1-1
+    ```
+    
+    Save the `main-script.yaml` file
+    
+1. Create the `roles` directory
 
     ```
     mkdir roles
     ```
     
-1. Create the task folder in the roles directory
+1. Create the task folder in the `roles` directory
 
     ```
     mkdir -p roles/task-1/tasks
@@ -185,49 +199,36 @@ cd /home/userX/ansible-workshop
 
     Repeat this step for task-2 & task-3, replacing the number as required
 
-1. To run the ansible script, use the following command:
+1. To run exercise 1 part 2 task, use the following command:
     
     ```
-    ansible-playbook -ki inventory.yaml exercise-1-part-two.yaml --skip-tags=task-2
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex1-2
     ```
-    
-    --skip-tags : skip the task with the tag specified
     
     --tags: run the task with the tag specified
     
-
-### Exercise 2 - Using Variables
-1. Return back to `ansible-workshop` directory
-
-    ```
-    cd /home/userX/ansible-workshop
-    ```
-
-1. Create a directory for exercise 2
-
-    ``` 
-    mkdir -p ex-2/playbooks
-    cd ex-2/playbooks
-    ```
+    --skip-tags : skip the task with the tag specified
     
-1. Create the ansible script for exercise 2
+### Exercise 2 - Using Variables & Loop function    
+1. Create exercise 2 task in `main-script.yaml`
     
     ```
-    nano exercise-2.yaml
+    nano main-script.yaml
     ```
     
-    And fill in the file with the following script
+    Copy task script for exercise 2 into `main-script.yaml`
     
     ```
-    - name: Write a playbook to output variables declared in group_vars folder
+    - name: Exercise 2 - Using Variables & Loop function
       hosts:
         managed_node
       roles:
         - role: single-variable
         - role: multiple-variable
+      tags: ex-2
     ```
     
-1. Create the ansible host file for the task
+1. Edit the ansible host file to use group names
 
     ```
     nano inventory.yaml
@@ -240,13 +241,7 @@ cd /home/userX/ansible-workshop
     targetnodeX
     ```
     
-1. Create the roles directory
-    
-    ```
-    mkdir roles
-    ```
-    
-1. Create the task folders in the roles directory
+1. Create exercise 2 task folders in the `roles` directory
 
     ```
     mkdir -p roles/single-variable/tasks
@@ -280,8 +275,8 @@ cd /home/userX/ansible-workshop
     ```
     - name: Printing single variable from group_vars folder
       debug:
-        msg: "Already installed {{item}} module"
-      loop: "{{installed_package}}"
+        msg: "Please install {{item}} module"
+      loop: "{{install_package}}"
     ```
     
 1. Create the variable file
@@ -303,71 +298,39 @@ cd /home/userX/ansible-workshop
     ```
     required_package: openssh-server
 
-    installed_package:
-      - openssh-client
+    install_package:
       - vim
       - python3
+      - nginx
     ```
   
-1. To run the ansible script, use the following command:
+1. To run exercise 2 task, use the following command:
 
     ```
-    ansible-playbook -ki inventory.yaml exercise-2.yaml
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex2
     ```
 
 ### Exercise 3 - Privilege Escalation
-1. Return back to `ansible-workshop` directory
-
-    ```
-    cd /home/userX/ansible-workshop
-    ```
-
-1. Create a directory for exercise 4
-
-    ``` 
-    mkdir -p ex-3/playbooks
-    cd ex-3/playbooks
-    ```
-    
-1. Create the ansible script for exercise 4
+1. Create exercise 3 task in `main-script.yaml`
     
     ```
-    nano exercise-3.yaml
+    nano main-script.yaml
     ```
     
-    And fill in the file with the following script
+    Copy task script for exercise 3 into `main-script.yaml`
     
     ```
-    - name: Install packages
+    - name: Exercise 3 - Privilege Escalation
       hosts:
         managed_node
       become: yes
 
       roles:
         - role: installpackage
-          tags: installpackage
+      tags: ex-3
     ```
-    
-1. Create the ansible host file for the task
 
-    ```
-    nano inventory.yaml
-    ```
-    
-    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
-    
-    ```
-    [managed_node]
-    targetnodeX
-    ```
-    
-1. Create the roles directory
-    
-    ```
-    mkdir roles
-    ```
-    
-1. Create the task folders in the roles directory
+1. Create exercise 3 task folders in the `roles` directory
 
     ```
     mkdir -p roles/installpackage/tasks
@@ -384,8 +347,9 @@ cd /home/userX/ansible-workshop
     ```
     - name: Install nginx package
       apt:
-        name: nginx
+        name: "{{item}}"
         state: present
+      loop: "{{install_package}}"
 
     - name: Start nginx service
       service:
@@ -393,55 +357,48 @@ cd /home/userX/ansible-workshop
         state: started
     ```
       
-1. To run the ansible script, use the following command:
+1. To run exercise 3 task, use the following command:
     
     Run the script to only target the managed node:
     
     ```
-    ansible-playbook -ki inventory.yaml exercise-3.yaml
+    ansible-playbook -Kki inventory.yaml main-script.yaml --tags=ex3
     ```
+    
+    -K : prompt user to input become password
 
 ### Exercise 4 - Target Control
-1. Return back to `ansible-workshop` directory
-
-    ```
-    cd /home/userX/ansible-workshop
-    ```
-
-1. Create a directory for exercise 4
-
-    ``` 
-    mkdir -p ex-4/playbooks
-    cd ex-4/playbooks
-    ```
-    
-1. Create the ansible script for exercise 4
+1. Create exercise 4 task in `main-script.yaml`
     
     ```
-    nano exercise-4.yaml
+    nano main-script.yaml
     ```
     
-    And fill in the file with the following script
+    Copy task script for exercise 4 into `main-script.yaml`
     
     ```
-    - name: First script to target only one managed node
+    - name: Exercise 4 - Target Control, Target only one managed node
       hosts:
         managed_node
       roles:
         - role: get-disk-usage
         - role: get-block-devices
-      tags: managed_node
+      tags:
+        - ex-4
+        - ex-4-managed_node
 
-    - name: Second script to target both the managed node & localhost
+    - name: Exercise 4 - Target Control, Target both the managed node & localhost
       hosts:
         all_node
       roles:
         - role: get-disk-usage
         - role: get-block-devices
-      tags: all_node
+      tags: 
+        - ex-4
+        - ex-4-all_node
     ```
     
-1. Create the ansible host file for the task
+1. Edit the ansible host file to add another group
 
     ```
     nano inventory.yaml
@@ -457,14 +414,8 @@ cd /home/userX/ansible-workshop
     targetnodeX
     localhost
     ```
-    
-1. Create the roles directory
-    
-    ```
-    mkdir roles
-    ```
-    
-1. Create the task folders in the roles directory
+
+1. Create the task folders in the `roles` directory
 
     ```
     mkdir -p roles/get-disk-usage/tasks
@@ -509,22 +460,25 @@ cd /home/userX/ansible-workshop
         msg: "{{BlockDeviceData.stdout_lines}}"
     ```
       
-1. To run the ansible script, use the following command:
+1. To run exercise 4 task, use the following command:
     
-    Run the script to only target the managed node:
-    
-    ```
-    ansible-playbook -ki inventory.yaml exercise-4.yaml --tags=managed_node
-    ```
-    
-    Run the script to target both the managed node & control node:
+    Run the task to only target the managed node:
     
     ```
-    ansible-playbook -ki inventory.yaml exercise-4.yaml --tags=all_node
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-4-managed_node
     ```
-
-
-
+    
+    Run the task to target both the managed node & control node:
+    
+    ```
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-4-all_node
+    ```
+    
+    Run both of the task:
+    
+    ```
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-4
+    ```   
 
 <div style="page-break-after: always;"></div>
 
