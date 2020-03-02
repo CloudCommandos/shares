@@ -73,7 +73,7 @@ cd /home/userX/ansible-workshop
 
 ### Exercise 1 - Introduction to Ansible
 #### Part One - Basic Introduction
-Exercise 1 part 1 will guide the user through some basic scripting in the Ansible environment using the `debug` module which is similar to a printing module. The main intention is to get the user familiarize with the Ansible environment before proceeding to the next exercise.
+Exercise 1 part 1 will guide the user through some basic scripting in the Ansible environment using the `debug` module which is similar to a printing module. The main intention is to get the user to familiarize with the Ansible environment before proceeding to the next exercise.
 
 1. Create the `playbooks` directory 
 
@@ -144,9 +144,9 @@ Exercise 1 part 1 will guide the user through some basic scripting in the Ansibl
     -i : to pass in the inventory file
 
 #### Part Two - Introduction to Roles & Tags
-Exercise 1 part 2 will focus on the introduction of `roles` and `tags` module. One of the best practices is to keep the ansible environment well organised and this can be achieved through the usage of `roles` module and directory to organise all the tasks instead of writing it all inside the main script. If the project uses alot of tasks, the main script will look very messy and hard to maintain. Using the `roles` module, user can split up all the task in the main script into individual roles and store the actual task in the `roles` directory, thus keeping the main script neat and tidy.
+Exercise 1 part 2 will focus on the introduction of `roles` and `tags` module. One of the best practices is to keep the Ansible environment well organised. This can be achieved through the use of `roles` module and file directories to organise all the tasks instead of having all contents inside a single main script. If the project uses alot of tasks, the main script will look very messy and hard to maintain. Using the `roles` module, users can split up all the tasks in the main script into individual roles and store the actual tasks in the `roles` directory, thus keeping the main script neat and tidy.
 
-The `tags` module can be use to provide tagging to each individual role task or the whole task. By default ansible will run all the tasks inside the main script, however with the use of `tags` module the user can then specify which task to run instead of all the tasks.
+The `tags` module can be used to provide tagging to each individual role task or the whole task. By default Ansible will run all the tasks inside the main script, however with the use of `tags` module the user can specify which tasks to run instead of all the tasks.
 
 1. Create exercise 1 part 2 task in `main-script.yaml`
     
@@ -216,7 +216,7 @@ The `tags` module can be use to provide tagging to each individual role task or 
     --skip-tags : skip the task with the tag specified
     
 ### Exercise 2 - Using Variables & Loop function    
-Exercise 2 will focus on the introduction of variables calling in ansible task and also the `loop` module. This exercise will guide the user through the creation of the variable directory and also the method to call for the variables in the task. The exercise will also focus on the `loop` module which is very useful when the user is required to pass in an array of variable into the task.
+Exercise 2 will focus on the introduction of variables in Ansible tasks and also the `loop` module. This exercise will guide the user through the creation of the variable directory and also the playbook syntax to call for the variables inside tasks. The exercise will also focus on the `loop` module, which is very useful when the user is required to pass in arrays of values into tasks.
 
 1. Create exercise 2 task in `main-script.yaml`
     
@@ -319,7 +319,7 @@ Exercise 2 will focus on the introduction of variables calling in ansible task a
     ```
 
 ### Exercise 3 - Privilege Escalation
-Exercise 3 will focus on privilege escalation which is required to run specific tasks. One particular task is to install modules/packages on the target node VM, which will fail if the task is run by a normal user with no privlege. This exercise will introduce the `become` module which will allow the user to become sudoer/root and run the installation task successfully.
+Exercise 3 will focus on privilege escalation, which is required to run specific tasks. One such particular task is to install modules/packages on the target node VM. This task will fail if it is run by a normal user with no privleges. This exercise will introduce the `become` module. This module allows the user to become another user of the target node and use that user account to run the tasks. Becoming a sudoer/root user will thus give the necessary privileges for tasks such as module/package installation.
 
 1. Create exercise 3 task in `main-script.yaml`
     
@@ -378,7 +378,7 @@ Exercise 3 will focus on privilege escalation which is required to run specific 
     -K : prompt user to input become password
 
 ### Exercise 4 - Target Control
-Exercise 4 focus on target control for the ansible task. This exercise will introduce the user to target control through the setup of the ansible host file and also the `hosts` module in the ansible task. 
+Exercise 4 focuses on target control. This exercise will demonstrate how to specify target nodes for each Ansible task through the setup of the ansible host file and the `hosts` module.
 
 1. Create exercise 4 task in `main-script.yaml`
     
