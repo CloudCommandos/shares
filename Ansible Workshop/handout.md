@@ -73,6 +73,8 @@ cd /home/userX/ansible-workshop
 
 ### Exercise 1 - Introduction to Ansible
 #### Part One - Basic Introduction
+Exercise 1 part 1 will guide the user through some basic scripting in the Ansible environment using the `debug` module which is similar to a printing module. The main intention is to get the user to familiarize with the Ansible environment before proceeding to the next exercise.
+
 1. Create the `playbooks` directory 
 
     ``` 
@@ -115,7 +117,7 @@ cd /home/userX/ansible-workshop
             msg: "This is Task 3"
     ```
     
-    Once everything is filled up, save the file by pressing `ctrl-x` then `y` for yes and lastly `enter`.
+    Once everything is filled up, save the file by pressing `ctrl-o` then `enter`. Exit the file by pressing `ctrl-x`.
     
 1. Create the ansible host file for the task
 
@@ -142,6 +144,10 @@ cd /home/userX/ansible-workshop
     -i : to pass in the inventory file
 
 #### Part Two - Introduction to Roles & Tags
+Exercise 1 part 2 will focus on the introduction of `roles` and `tags` module. One of the best practices is to keep the Ansible environment well organised. This can be achieved through the use of `roles` module and file directories to organise all the tasks instead of having all contents inside a single main script. If the project uses alot of tasks, the main script will look very messy and hard to maintain. Using the `roles` module, users can split up all the tasks in the main script into individual roles and store the actual tasks in the `roles` directory, thus keeping the main script neat and tidy.
+
+The `tags` module can be used to provide tagging to each individual role task or the whole task. By default Ansible will run all the tasks inside the main script, however with the use of `tags` module the user can specify which tasks to run instead of all the tasks.
+
 1. Create exercise 1 part 2 task in `main-script.yaml`
     
     ```
@@ -210,6 +216,8 @@ cd /home/userX/ansible-workshop
     --skip-tags : skip the task with the tag specified
     
 ### Exercise 2 - Using Variables & Loop function    
+Exercise 2 will focus on the introduction of variables in Ansible tasks and also the `loop` module. This exercise will guide the user through the creation of the variable directory and also the playbook syntax to call for the variables inside tasks. The exercise will also focus on the `loop` module, which is very useful when the user is required to pass in arrays of values into tasks.
+
 1. Create exercise 2 task in `main-script.yaml`
     
     ```
@@ -311,6 +319,8 @@ cd /home/userX/ansible-workshop
     ```
 
 ### Exercise 3 - Privilege Escalation
+Exercise 3 will focus on privilege escalation, which is required to run specific tasks. One such particular task is to install modules/packages on the target node VM. This task will fail if it is run by a normal user with no privleges. This exercise will introduce the `become` module. This module allows the user to become another user of the target node and use that user account to run the tasks. Becoming a sudoer/root user will thus give the necessary privileges for tasks such as module/package installation.
+
 1. Create exercise 3 task in `main-script.yaml`
     
     ```
@@ -368,6 +378,8 @@ cd /home/userX/ansible-workshop
     -K : prompt user to input become password
 
 ### Exercise 4 - Target Control
+Exercise 4 focuses on target control. This exercise will demonstrate how to specify target nodes for each Ansible task through the setup of the ansible host file and the `hosts` module.
+
 1. Create exercise 4 task in `main-script.yaml`
     
     ```
@@ -381,7 +393,6 @@ cd /home/userX/ansible-workshop
       hosts:
         managed_node
       roles:
-        - role: get-disk-usage
         - role: get-block-devices
       tags:
         - ex-4
@@ -392,7 +403,6 @@ cd /home/userX/ansible-workshop
         all_node
       roles:
         - role: get-disk-usage
-        - role: get-block-devices
       tags: 
         - ex-4
         - ex-4-all_node
@@ -462,13 +472,13 @@ cd /home/userX/ansible-workshop
       
 1. To run exercise 4 task, use the following command:
     
-    Run the task to only target the managed node:
+    Run the task to get block devices data from the managed node:
     
     ```
     ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-4-managed_node
     ```
     
-    Run the task to target both the managed node & control node:
+    Run the task to get the disk usage data from both the managed node & control node:
     
     ```
     ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-4-all_node
