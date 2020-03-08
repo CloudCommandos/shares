@@ -309,7 +309,7 @@ Exercise 2 will focus on the introduction of variables in Ansible tasks and also
 1. To run exercise 2 task, use the following command:
 
     ```bash
-    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex2
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-2
     ```
 
 ### 3.3 Exercise 3 - Privilege Escalation
@@ -366,7 +366,7 @@ Exercise 3 will focus on privilege escalation, which is required to run specific
     Run the script to only target the managed node:
 
     ```bash
-    ansible-playbook -Kki inventory.yaml main-script.yaml --tags=ex3
+    ansible-playbook -Kki inventory.yaml main-script.yaml --tags=ex-3
     ```
 
     -K : prompt user to input become password
@@ -464,7 +464,7 @@ Exercise 4 focuses on target control. This exercise will demonstrate how to spec
         msg: "{{BlockDeviceData.stdout_lines}}"
     ```
     <div style="page-break-after: always;"></div>
-    
+
 1. To run exercise 4 task, use the following command:
 
     Run the task to get block devices data from the managed node:
