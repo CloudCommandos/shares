@@ -202,7 +202,7 @@ The `tags` module can be used to provide tagging to each individual role task or
 1. To run exercise 1 part 2 task, use the following command:
 
     ```bash
-    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex1-2
+    ansible-playbook -ki inventory.yaml main-script.yaml --tags=ex-1-2
     ```
 
     --tags: run the task with the tag specified
