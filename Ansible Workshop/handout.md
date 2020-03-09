@@ -87,7 +87,7 @@ Exercise 1 part 1 will guide the user through some basic scripting in the Ansibl
     nano main-script.yaml
     ```
 
-    Copy the following task script for exercise 1 part 1 into `main-script.yaml` (Replace 'X' with the number assigned to you).
+    Add the following task script into `main-script.yaml` (Replace 'X' with the number assigned to you).
 
     ```yaml
     - name: Exercise 1 Part 1 - Introduction to Ansible
@@ -147,7 +147,7 @@ The `tags` module can be used to provide tagging to each individual role task or
     nano main-script.yaml
     ```
 
-    Copy task script for exercise 1 part 2 into `main-script.yaml`, add this script below exercise 1 part 1 task (Replace 'X' with the number assigned to you)
+    Add the following into `main-script.yaml` below exercise 1 part 1 task (Replace 'X' with the number assigned to you)
 
     ```yaml
     - name: Exercise 1 Part 2 - Introduction to roles & tags
@@ -218,7 +218,7 @@ Exercise 2 will focus on the introduction of variables in Ansible tasks and also
     nano main-script.yaml
     ```
 
-    Copy task script for exercise 2 into `main-script.yaml`
+    Add the following into `main-script.yaml`
 
     ```yaml
     - name: Exercise 2 - Using Variables & Loop function
@@ -236,11 +236,37 @@ Exercise 2 will focus on the introduction of variables in Ansible tasks and also
     nano inventory.yaml
     ```
 
-    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)
+    Add your target node hostname/ip address into the file (Replace 'X' with the number assigned to you)  
+    The `[managed_node]` is an arbitrary host group name that collectively represents all the hosts under it
 
     ```yaml
     [managed_node]
     targetnodeX
+    ```
+
+1. Create the variable file
+
+    First create the group variable directory
+
+    ```bash
+    mkdir group_vars
+    ```
+
+    Next create the variable file
+
+    ```bash
+    nano group_vars/all.yaml
+    ```
+
+    Fill in the `all.yaml` files with the following variables
+
+    ```yaml
+    required_package: openssh-server
+
+    install_package:
+      - vim
+      - python3
+      - nginx
     ```
 
 1. Create exercise 2 task folders in the `roles` directory
@@ -281,31 +307,6 @@ Exercise 2 will focus on the introduction of variables in Ansible tasks and also
       loop: "{{install_package}}"
     ```
 
-1. Create the variable file
-
-    First create the group variable directory
-
-    ```bash
-    mkdir group_vars
-    ```
-
-    Next create the variable file
-
-    ```bash
-    nano group_vars/all.yaml
-    ```
-
-    Fill in the `all.yaml` files with the following variables
-
-    ```yaml
-    required_package: openssh-server
-
-    install_package:
-      - vim
-      - python3
-      - nginx
-    ```
-
 1. To run exercise 2 task, use the following command:
 
     ```bash
@@ -321,7 +322,7 @@ Exercise 3 will focus on privilege escalation, which is required to run specific
     nano main-script.yaml
     ```
 
-    Copy task script for exercise 3 into `main-script.yaml`
+    Add the following into `main-script.yaml`
 
     ```yaml
     - name: Exercise 3 - Privilege Escalation
@@ -347,7 +348,9 @@ Exercise 3 will focus on privilege escalation, which is required to run specific
     ```
 
     Fill in the `main.yaml` file of installpackage task with the following script
+
     <div style="page-break-after: always;"></div>
+
     ```yaml
     - name: Install nginx package
       apt:
@@ -380,7 +383,7 @@ Exercise 4 focuses on target control. This exercise will demonstrate how to spec
     nano main-script.yaml
     ```
 
-    Copy task script for exercise 4 into `main-script.yaml`
+    Add the following into `main-script.yaml`
 
     ```yaml
     - name: Exercise 4 - Target Control, Target only one managed node
@@ -463,6 +466,7 @@ Exercise 4 focuses on target control. This exercise will demonstrate how to spec
       debug:
         msg: "{{BlockDeviceData.stdout_lines}}"
     ```
+
     <div style="page-break-after: always;"></div>
 
 1. To run exercise 4 task, use the following command:
