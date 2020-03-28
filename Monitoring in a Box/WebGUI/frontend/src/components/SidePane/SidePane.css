@@ -1,0 +1,78 @@
+.NavigationBtn {
+    display: block;
+    width: 80%;
+    min-height: 50px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    background-color: rgb(32, 51, 59);
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid #3b3b3b;
+    -webkit-box-shadow: inset 0px 0px 4px #3b3b3b;
+    -moz-box-shadow: inset 0px 0px 4px #3b3b3b;
+    box-shadow: inset 0px 0px 4px #3b3b3b;
+    outline: none;
+    color: white;
+    overflow: hidden;
+}
+
+.NavigationBtn:hover {
+    -webkit-box-shadow: inset 0px 0px 2px #3b3b3b;
+    -moz-box-shadow: inset 0px 0px 2px #3b3b3b;
+    box-shadow: inset 0px 0px 2px #3b3b3b;
+    background-color: rgb(36, 106, 136);
+}
+
+.AdminNavigationBtn {
+    display: block;
+    width: 80%;
+    min-height: 50px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    background-color: rgb(55, 32, 38);
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid #3b3b3b;
+    -webkit-box-shadow: inset 0px 0px 4px #3b3b3b;
+    -moz-box-shadow: inset 0px 0px 4px #3b3b3b;
+    box-shadow: inset 0px 0px 4px #3b3b3b;
+    outline: none;
+    color: white;
+    overflow: hidden;
+}
+
+.AdminNavigationBtn:hover {
+    -webkit-box-shadow: inset 0px 0px 2px #3b3b3b;
+    -moz-box-shadow: inset 0px 0px 2px #3b3b3b;
+    box-shadow: inset 0px 0px 2px #3b3b3b;
+    background-color: rgb(122, 47, 66);
+}
+
+.NavigationBtnActive{
+    border-color: white;
+}
+
+#logoutContainer {
+    display: inline-block;
+}
+
+#logoutBtn {
+    border-radius: 0 0 5px 0;
+    border-color: #563e44;
+    background-color: #773344;
+    color: white;
+    padding: 3px 15px;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+#clockdiv {
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    left: 1vw;
+}

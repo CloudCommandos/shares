@@ -1,0 +1,52 @@
+.GreenSubmitBtn {
+    color: white;
+    background-color: rgb(45, 180, 45);
+    border: none;
+    padding: 1em;
+    opacity: 0.85;
+    font-weight: bold;
+}
+
+.GreenSubmitBtn:hover {
+    opacity: 1;
+}
+
+.GreenSubmitBtn:disabled {
+    opacity: 0.5;
+}
+
+.BlueSubmitBtn {
+    color: white;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    padding: 1em;
+    opacity: 0.85;
+    font-weight: bold;
+}
+
+.BlueSubmitBtn:hover {
+    opacity: 1;
+}
+
+.BlueSubmitBtn:disabled {
+    opacity: 0.5;
+}
+
+#fileCheckBtn:disabled {
+    opacity: 0.5;
+}
+
+.MainContentWrapper {
+    margin: 20px;
+    height: 90%;
+}
+
+.MainContentBody {
+    margin: 2% 0 0 0;
+    height: 97%;
+}
+
+.MainContentSubBody {
+    height: 82%;
+    margin: 2% 0 0 0;
+}

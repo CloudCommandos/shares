@@ -1,0 +1,100 @@
+#system-settings-menu {
+    //background-color: rgba(0,0,0,0.1);
+    background-color: #282828;
+    width: 16%;
+    height: 95%;
+    padding: 1px;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    float: left;
+}
+
+#system-settings-menu > button{
+    transition-duration: 0.6s;
+}
+
+#system-settings-content-wrapper {
+    width: 84%;
+    height: 95%;
+    display: inline-block;
+    position: relative;
+    float: center;
+    z-index: 99;
+}
+
+.MenuBtn-SlideOut {
+    transform: translate(-100%, 0);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.system-settings-content-div {
+    white-space: nowrap;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    height: 100%;
+    opacity: 1;
+    width: 100%;
+    overflow: hidden;
+    display:block;
+    padding: 0 1.5rem;
+    left:0;
+}
+
+.system-settings-content-div-SlideOut {
+    opacity: 0;
+    width: 0%;
+}
+
+/*EXPORT ACL TABLE*/
+#export-acl-table-div {
+    overflow: auto;
+    height: 90%;
+}
+#export-acl-table-div .rc-table-content table {
+    border: 1px solid white;
+    width: 100%;
+}
+#export-acl-table-div .rc-table-content th,
+#export-acl-table-div .rc-table-content td {
+    border: 1px solid white;
+    padding: 5px;
+}
+#export-acl-table-div .rc-table-row:hover {
+    background-color: rgba(255,80,80,0.5);
+}
+
+/*PARAMETERS TABLE*/
+#parameters-table-div {
+    overflow: auto;
+    height: 90%;
+}
+#parameters-table-div .rc-table-content table {
+    border: 1px solid white;
+    width: 100%;
+}
+#parameters-table-div .rc-table-content th,
+#parameters-table-div .rc-table-content td {
+    border: 1px solid white;
+    padding: 5px;
+}
+#parameters-table-div .rc-table-row:hover {
+    background-color: rgba(255,80,80,0.5);
+}
+
+.RichTextEditor__root___2QXK- {
+  height: 90%;
+}
+.RichTextEditor__editor___1QqIU {
+  height: 97%;
+  overflow: auto;
+}
+.DraftEditor-root {
+  height: 94%;
+  overflow: auto;
+}
+.DraftEditor-editorContainer {
+  height: 100%;
+  overflow: auto;
+}

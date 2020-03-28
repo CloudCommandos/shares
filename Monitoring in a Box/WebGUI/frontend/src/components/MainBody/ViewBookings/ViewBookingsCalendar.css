@@ -1,0 +1,26 @@
+#ViewBookings_Calendar .fc-view-container {
+    background-color: rgba(200,200,200,0.5);
+}
+
+#ViewBookings_Calendar .fc-day-header {
+    background-color: rgba(4,32,66,0.8);
+}
+
+#ViewBookings_Calendar .fc-unthemed td {
+    border-color: black;
+}
+#ViewBookings_Calendar .fc-unthemed td.fc-today {
+    background-color: rgba(4,32,66,0.5);
+}
+
+#ViewBookings_Calendar table {
+    border-color: black;
+}
+
+#ViewBookings_Calendar .fc-unthemed .fc-list-heading td {
+    background-color: rgba(4,32,66,0.5);
+}
+
+#ViewBookings_Calendar .fc-list-item:hover td {
+    background-color: rgba(180,160,160,0.6);
+}

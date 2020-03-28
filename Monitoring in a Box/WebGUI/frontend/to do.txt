@@ -1,0 +1,15 @@
+npm install jquery@3.4.1
+npm install react-router-dom@5.1.2
+npm install react-excel-renderer@1.1.0
+npm install xlsx@0.15.1
+npm install file-saver@1.3.3
+npm install @fortawesome/fontawesome-svg-core@1.2.25
+npm install @fortawesome/free-solid-svg-icons@5.11.2
+npm install @fortawesome/react-fontawesome@0.1.7
+npm install reactjs-popup@1.5.0
+npm install react-datepicker@2.10.0
+npm install svgo@1.3.0
+npm install -g serve@11.2.0
+npm install socket.io-client@2.3.0
+npm install rc-table@7.0.0-alpha.20
+npm install react-rte@0.16.1

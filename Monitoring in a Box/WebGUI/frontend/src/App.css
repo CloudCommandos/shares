@@ -1,0 +1,195 @@
+.Login {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    color: white;
+}
+
+.Login-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 1vmin);
+    color: white;
+}
+
+.login_input {
+    border: none;
+    padding: 5px;
+    margin: 1px;
+    width: 12em;
+}
+.login_input#submit {
+    border-radius: 0 0 5px 5px;
+    background-color: rgb(36, 106, 136);
+    color: white;
+    width: 12em;
+}
+
+.App-link {
+    color: #09d3ac;
+}
+
+.MainContent {
+	background-color: #e0e0e0;
+	width: 85vw;
+	/*height: 100vh;*/
+}
+
+#MainContentContainer {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+	background-color: #282828;
+	width: 83vw;
+	height: 96%;
+	margin: 1% auto;
+	overflow: hidden;
+}
+
+.MainContentTitle{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.MainContentTitle2{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.ContentContainer {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 5px black;
+    position: absolute;
+    top: 0;
+    width: 83vw;
+	height: 96%;
+    margin: 0.85% auto;
+	background-color: rgba(35, 59, 69, 0.9);
+	-webkit-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.AdminContentContainer {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 5px black;
+    position: absolute;
+    top: 0;
+    width: 83vw;
+	height: 96%;
+    margin: 0.85% auto;
+	background-color: rgba(88, 38, 51,0.9);
+	-webkit-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.ContentContainer-SlideOut {
+    transform: translate(-100%, 0);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#coverphoto {
+    width: 100%;
+    height: 96vh;
+    object-fit: cover;
+}
+
+.SidePane {
+    width: 15vw;
+    z-index: 100;
+    -webkit-box-shadow: 0px 7px 7px 7px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 7px 7px 7px rgba(0,0,0,0.4);
+    box-shadow: 0px 7px 7px 7px rgba(0,0,0,0.4);
+    overflow: auto;
+    /*background:
+        repeating-linear-gradient(120deg, rgba(88, 38, 51,.4), rgba(88, 38, 51,.4) 1px, transparent 2px, transparent 60px),
+        repeating-linear-gradient(60deg, rgba(88, 38, 51,.4), rgba(88, 38, 51,.4) 1px, transparent 2px, transparent 60px);
+    background-size: 70px 120px;*/
+
+    background-color: #282828;
+}
+
+div {
+    transition-duration: 0.6s;
+}
+
+.NoTransformationDuration {
+    transition-duration: 0s !important;
+}
+
+hr {
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+    border-style: outset;
+    opacity: 0.6;
+    border-width: 1px;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+.bounce {
+    display: inline-block;
+    position: relative;
+    -moz-animation: bounce 0.7s infinite linear;
+    -o-animation: bounce 0.7s infinite linear;
+    -webkit-animation: bounce 0.7s infinite linear;
+    animation: bounce 0.7s infinite linear;
+}
+@-webkit-keyframes bounce {
+    0% { top: 0.2em; }
+    25% { top: -0.2em; }
+    40% { top: -0.3em; }
+    60% { top: -0.3em; }
+    75% { top: -0.2em; }
+    100% { top: 0.2em; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0.2em; }
+    25% { top: -0.2em; }
+    40% { top: -0.3em; }
+    60% { top: -0.3em; }
+    75% { top: -0.2em; }
+    100% { top: 0.2em; }
+}
+@-o-keyframes bounce {
+    0% { top: 0.2em; }
+    25% { top: -0.2em; }
+    40% { top: -0.3em; }
+    60% { top: -0.3em; }
+    75% { top: -0.2em; }
+    100% { top: 0.2em; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0.2em; }
+    25% { top: -0.2em; }
+    40% { top: -0.3em; }
+    60% { top: -0.3em; }
+    75% { top: -0.2em; }
+    100% { top: 0.2em; }
+}
+@keyframes bounce {
+    0% { top: 0.2em; }
+    25% { top: -0.2em; }
+    40% { top: -0.3em; }
+    60% { top: -0.3em; }
+    75% { top: -0.2em; }
+    100% { top: 0.2em; }
+}

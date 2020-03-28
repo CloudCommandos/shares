@@ -1,0 +1,132 @@
+#changePasswordDiv {
+    margin: 20px;
+}
+
+#changePasswordContentDivWrapper {
+    overflow: hidden;
+    top: -16px;
+    padding: 16px 0 0 0;
+    position: relative;
+    z-index: 99;
+}
+
+.changePasswordContentDiv {
+    display: inline-block;
+}
+
+.changePasswordContentDiv-SlideUp {
+    transform: translate(0, -115%);
+}
+
+#changePasswordBtn {
+    width: 200px;
+    background-color: rgb(41, 123, 147);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 100;
+    position: relative;
+    height: 33px;
+}
+
+.changePasswordBtn-expanded {
+    border-radius: 1em 1em 0 0;
+    transition: all 1s;
+    background-color: rgb(40, 78, 89) !important;
+}
+
+.changePasswordBtn-collapsed {
+    border-radius: 1em;
+    transition: all 1.8s;
+}
+
+.passwordChangeElement {
+    position: relative;
+    float: left;
+    padding: 3px 5px;
+    width: 200px;
+    text-align: center;
+}
+
+#passwordChangeSubmit {
+    background-color: rgb(220, 76, 76);
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 1em 1em;
+}
+
+#AccountSettingsContainer .modalHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(119, 51, 68, 0.9);
+    color: white;
+    margin: 0;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#AccountSettingsContainer .modalContent {
+    background-color: #282828;
+    color: white;
+    margin: 1rem;
+}
+
+#AccountSettingsContainer .modalContent table{
+    margin: 0 0 16px 0;
+}
+#AccountSettingsContainer .modalContent td{
+    padding: 0 20px;
+}
+
+#AccountSettingsContainer .modal-submit-btn{
+    border-radius: 5px;
+    color: white;
+    padding: 3px 15px;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+#AccountSettingsContainer #cancelItemBtn {
+    border-color: #992222;
+    background-color: rgb(220, 76, 76);
+}
+
+#AccountSettingsContainer #rejectEventBtn {
+    border-color: #992222;
+    background-color: rgb(220, 76, 76);
+}
+
+#AccountSettingsContainer #yesBtn {
+    border-color: rgb(35,139,35);
+    background-color: rgb(50,200,50);
+    padding: 5px 8%;
+    margin-left: 10%;
+    font-size: 1.2em;
+}
+
+#AccountSettingsContainer #noBtn {
+    border-color: #992222;
+    background-color: rgb(220, 76, 76);
+    padding: 5px 8%;
+    float: right;
+    margin-right: 10%;
+    font-size: 1.2em;
+}
+
+#AccountSettingsContainer .xbtn {
+    background-color: #ffffff;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.8em;
+    color: black;
+    font-size: 0.8em;
+    padding: 0;
+    border: 0;
+    right: -0.6em;
+    top: -0.6em;
+    position: absolute;
+}
