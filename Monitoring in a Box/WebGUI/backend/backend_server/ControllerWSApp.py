@@ -391,10 +391,6 @@ class ControllerWSApp:
         filepath = os.path.join(os.getcwd() + IssConfig.WS_SCRIPTS_DIR, filename)
 
         status = '';
-        contents = contents.replace('&nbsp;', ' ')
-        contents = contents.replace('<br>', '\n')
-        contents = contents.replace('<p>', '')
-        contents = contents.replace('</p>', '')
         # print(filepath)
         if (os.path.exists(filepath)):
             with open(filepath, 'w') as f:

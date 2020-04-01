@@ -1,0 +1,487 @@
+20200320-161059-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-161059-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-161349-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-161349-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-161528-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-161528-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-161531-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-161531-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-161546-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-161546-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-161626-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'new_password': u'12345', 'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'11111'}
+20200320-161627-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'new_password': u'12345', 'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'11111'}
+20200320-161627-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200320-162117-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-162117-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-162118-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'fcd3f72e85f9dd0792affa511ba1893196df91f09028ced46975d79985a1506b', 'id': 'REQ_WS_LOGOUT'}
+20200320-162118-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 'You are logged out', 'id': 'RES_WS_LOGOUT'}
+20200320-162123-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200320-162124-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '8e0d24c9c5daffd83591ec18d0a96214b20f5139a08a5279890a1a366536e09f', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200320-162137-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'new_password': u'11111', 'session_key': u'8e0d24c9c5daffd83591ec18d0a96214b20f5139a08a5279890a1a366536e09f', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'12345'}
+20200320-162138-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'new_password': u'11111', 'session_key': u'8e0d24c9c5daffd83591ec18d0a96214b20f5139a08a5279890a1a366536e09f', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'12345'}
+20200320-162138-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200320-162153-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'8e0d24c9c5daffd83591ec18d0a96214b20f5139a08a5279890a1a366536e09f', 'id': 'REQ_WS_LOGOUT'}
+20200320-162153-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 'You are logged out', 'id': 'RES_WS_LOGOUT'}
+20200320-162202-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200320-162202-[INFO]-ControllerWSApp.py:55:: ok msg:Incorrect username/password
+20200320-162202-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200320-162202-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200320-162206-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'11111', 'id': 'REQ_WS_LOGIN'}
+20200320-162206-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200320-162237-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-162237-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-162307-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br><br><br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br><br>'}
+20200320-162307-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-162307-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-162307-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n\n\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-162321-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br><br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br><br><br>'}
+20200320-162321-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-162322-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-162322-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-162332-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br><br><br><br>'}
+20200320-162332-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-162333-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-162333-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-162529-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-162529-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-162532-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-162532-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-162736-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-162736-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-163043-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-163043-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-163140-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-163140-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-163141-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'1a27035fdd8463810abab85b7248fb1d3d976dca3d76aa64d5415afc9f615d68', 'id': 'REQ_WS_LOGOUT'}
+20200320-163141-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 'You are logged out', 'id': 'RES_WS_LOGOUT'}
+20200320-163144-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200320-163144-[INFO]-ControllerWSApp.py:55:: ok msg:Incorrect username/password
+20200320-163144-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200320-163144-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200320-163146-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'11111', 'id': 'REQ_WS_LOGIN'}
+20200320-163147-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '57bcd3b365bd0563d2a5c5afcd2e2203fc24aee4089842e963de79257b488dce', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200320-163154-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'new_password': u'12345', 'session_key': u'57bcd3b365bd0563d2a5c5afcd2e2203fc24aee4089842e963de79257b488dce', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'11111'}
+20200320-163154-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'new_password': u'12345', 'session_key': u'57bcd3b365bd0563d2a5c5afcd2e2203fc24aee4089842e963de79257b488dce', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'11111'}
+20200320-163154-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200320-163319-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'57bcd3b365bd0563d2a5c5afcd2e2203fc24aee4089842e963de79257b488dce', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-163319-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-163331-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'57bcd3b365bd0563d2a5c5afcd2e2203fc24aee4089842e963de79257b488dce', 'id': 'REQ_WS_LOGOUT'}
+20200320-163331-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': 'You are logged out', 'id': 'RES_WS_LOGOUT'}
+20200320-163335-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200320-163335-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '5d78149b659d664ce405784613fe4f02f8187ee07ae9ec51a249c9d8211dab6d', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200320-163342-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'new_password': u'11111', 'session_key': u'5d78149b659d664ce405784613fe4f02f8187ee07ae9ec51a249c9d8211dab6d', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'12345'}
+20200320-163343-[ERROR]-ControllerWSApp.py:42:: missing parameters in msg:{'new_password': u'11111', 'session_key': u'5d78149b659d664ce405784613fe4f02f8187ee07ae9ec51a249c9d8211dab6d', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'12345'}
+20200320-163343-[ERROR]-ControllerWSApp.py:52:: ko msg:9001
+20200320-163444-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'5d78149b659d664ce405784613fe4f02f8187ee07ae9ec51a249c9d8211dab6d', 'id': 'REQ_WS_LOGOUT'}
+20200320-163444-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': 'You are logged out', 'id': 'RES_WS_LOGOUT'}
+20200320-163447-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'11111', 'id': 'REQ_WS_LOGIN'}
+20200320-163447-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200320-163454-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'new_password': u'12345', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_CHANGE_PASSWORD', 'old_password': u'11111'}
+20200320-163454-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'id': 'RES_WS_CHANGE_PASSWORD'}
+20200320-163843-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-163843-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-163906-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br><br><br><br><br>'}
+20200320-163906-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-163907-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-163907-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-164208-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-164208-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-164213-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-164213-[INFO]-ControllerWSApp.py:48:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170035-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170035-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170039-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170039-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170110-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170110-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170143-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170143-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170147-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170147-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170212-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170212-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170214-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170214-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170218-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br><br><br><br><br><br>'}
+20200320-170218-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-170218-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170218-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170302-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170302-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170315-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170315-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170317-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170317-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170319-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br><br><br><br><br><br><br>'}
+20200320-170319-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-170319-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170319-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170452-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170452-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170538-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170538-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170631-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170631-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170633-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170633-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-170725-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-170725-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-170728-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-170728-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-171020-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-171020-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-171032-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-171032-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-171038-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-171038-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-171106-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-171106-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-171610-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-171610-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-171619-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-171619-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-171727-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-171727-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-171729-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-171729-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-171732-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-171732-[ERROR]-ControllerWSApp.py:43:: general error:'module' object has no attribute 'run'
+20200320-171732-[ERROR]-ControllerWSApp.py:50:: ko msg:64
+20200320-171817-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-171817-[ERROR]-ControllerWSApp.py:50:: ko msg:1
+20200320-171817-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-171817-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200320-171854-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-171855-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172131-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172131-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172325-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172326-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'RES_WS_RELOAD_SERVICE'}
+20200320-172337-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172337-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'RES_WS_RELOAD_SERVICE'}
+20200320-172447-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-172447-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-172548-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-172548-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-172607-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-172607-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-172610-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172610-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172612-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172612-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172622-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;Rules:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>}<br><br><br>'}
+20200320-172622-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200320-172623-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172623-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172626-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-172626-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-172629-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172629-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172633-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172633-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'RES_WS_RELOAD_SERVICE'}
+20200320-172650-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172650-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172655-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172655-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172817-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-172817-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-172820-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-172820-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200320-172847-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_alertmanager', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200320-172847-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'RES_WS_RELOAD_SERVICE'}
+20200320-173131-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200320-173131-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200320-173134-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'3bd98c78573c1e4410f4cf60f9fb5bf59bbc40a6feaf334cf21b5dd2418622ee', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200320-173134-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-110354-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200401-110355-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200401-110355-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-110355-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-110359-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-110359-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-110723-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-110723-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-110725-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-110725-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-111748-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-111748-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-111751-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-111751-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-112023-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-112023-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-112025-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'0363f7303ec7f9e8ae0283649b8aa3ca83b5fa27098270d60dad27c3dd9b941c', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-112025-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-112323-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200401-112323-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': 'd6cde455e3dd0a30cfc9b184e9a383b2214b0f9b03b116b43d8ace3493fb8d5d', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200401-112420-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200401-112421-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': 'bbe7116be5175d6474daa81b390da56bea6501aea2ede5d9028c4e383fc3b4b2', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200401-112421-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'bbe7116be5175d6474daa81b390da56bea6501aea2ede5d9028c4e383fc3b4b2', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-112421-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-112517-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'd6cde455e3dd0a30cfc9b184e9a383b2214b0f9b03b116b43d8ace3493fb8d5d', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-112517-[ERROR]-ControllerWSApp.py:50:: ko msg:11009
+20200401-112517-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'session_key': u'd6cde455e3dd0a30cfc9b184e9a383b2214b0f9b03b116b43d8ace3493fb8d5d', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-112517-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200401-112523-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200401-112523-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': 'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200401-112523-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-112523-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-112526-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-112526-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113017-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113017-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113019-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113019-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113223-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113223-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113225-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113225-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113418-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113418-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113420-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113420-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113435-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113435-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113438-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113438-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113652-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113652-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113655-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113655-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113722-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113722-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113725-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113725-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113800-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113800-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113807-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113807-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-113823-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-113823-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-113826-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-113826-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-114113-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-114113-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-114115-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-114115-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-114258-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-114258-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-114352-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-114352-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-114520-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-114520-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-114523-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-114523-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-114815-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-114815-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-114817-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-114817-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-114824-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-114824-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-114833-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-114833-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-114835-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-114835-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  endpoints:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n  - 10.0.1.13\n}\n\n\n\n\n\n\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115323-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br>s<basdasdsadsadsar><br><br><br><br><br>\nasdsassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssasssasdsssssssssss\ndsadas\nasdasds\nasd\n'}
+20200401-115323-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-115324-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115324-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br>s<basdasdsadsadsar><br><br><br><br><br>\nasdsassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssasssasdsssssssssss\ndsadas\nasdasds\nasd\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115328-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115328-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115330-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115330-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{<br>&nbsp;&nbsp;endpoints:<br>&nbsp;&nbsp;-&nbsp;10.0.1.10<br>&nbsp;&nbsp;-&nbsp;10.0.1.11<br>&nbsp;&nbsp;-&nbsp;10.0.1.12<br>&nbsp;&nbsp;-&nbsp;10.0.1.13<br>}<br><br><br>s<basdasdsadsadsar><br><br><br><br><br>\nasdsassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssasssasdsssssssssss\ndsadas\nasdasds\nasd\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115344-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\nasdas\nasdsa\n}'}
+20200401-115344-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-115345-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115345-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\nasdas\nasdsa\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115403-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115403-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115406-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115406-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\nasdas\nasdsa\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115410-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\nasdas\nasdsaasdasd\n}'}
+20200401-115410-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-115411-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115411-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\nasdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115413-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115413-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115415-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115415-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\nasdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115423-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  asdas\n  \n  asdas\nasdsaasdasd\n}'}
+20200401-115423-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-115423-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115423-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115428-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115428-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115430-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115430-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115448-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115448-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115456-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115456-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115501-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115501-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115503-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  asdas\n  \n  asdas\nasdsaasdasd\n}'}
+20200401-115503-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-115504-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115504-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115506-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115506-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115509-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115509-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115526-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115526-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115557-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115557-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115600-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115600-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115610-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115610-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115618-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115618-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115830-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115830-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115833-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115833-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115835-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n'}
+20200401-115836-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-115836-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115836-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115839-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-115839-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-115841-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115841-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115843-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115843-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-115846-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-115846-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120032-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120032-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120035-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-120035-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120038-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}\n\n'}
+20200401-120038-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-120038-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-120038-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120040-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-120040-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120045-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_alertmanager', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200401-120045-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'RES_WS_RELOAD_SERVICE'}
+20200401-120106-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120106-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120304-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120304-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120338-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120338-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120340-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-120340-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120341-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-120341-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120343-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-120343-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-120408-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120408-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120424-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120424-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120439-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120439-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120845-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120845-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120910-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120910-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120926-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120926-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-120944-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-120944-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121003-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121003-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121012-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121012-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\nasdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121017-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}'}
+20200401-121017-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-121017-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121017-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121021-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'service_name': u'reload_prometheus', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_RELOAD_SERVICE'}
+20200401-121022-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': 0, 'id': 'RES_WS_RELOAD_SERVICE'}
+20200401-121124-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121124-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121126-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121126-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121218-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121218-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121220-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121220-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121255-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121255-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121257-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121257-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121310-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121310-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121318-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121318-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121422-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121422-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121427-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121427-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121437-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121437-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121439-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121439-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121506-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121506-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121508-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121508-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121511-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121511-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121519-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121519-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121522-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121522-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121525-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121525-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121549-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121549-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121553-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121553-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121559-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'f811b41d52a404fa07a8baec082d0b2f12ee8e42631bce3dee74e0c18e100503', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121559-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121939-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'bbe7116be5175d6474daa81b390da56bea6501aea2ede5d9028c4e383fc3b4b2', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121939-[ERROR]-ControllerWSApp.py:50:: ko msg:11009
+20200401-121939-[ERROR]-ControllerWSApp.py:40:: missing parameters in msg:{'session_key': u'bbe7116be5175d6474daa81b390da56bea6501aea2ede5d9028c4e383fc3b4b2', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121939-[ERROR]-ControllerWSApp.py:50:: ko msg:9001
+20200401-121945-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'username': u'10208958', 'password': u'12345', 'id': 'REQ_WS_LOGIN'}
+20200401-121945-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': u'10208958', 'session_key': '2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'is_admin': True, 'id': 'RES_WS_LOGIN'}
+20200401-121945-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-121945-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-121948-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121948-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121949-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121949-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-121950-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-121950-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122010-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-122010-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-122013-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122013-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122031-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}'}
+20200401-122031-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-122032-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122032-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asdas\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122035-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}'}
+20200401-122035-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-122036-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122036-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122037-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122037-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12asd\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122038-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122038-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122042-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_UPDATE_FILE_CONTENTS', 'contents': u'{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n'}
+20200401-122042-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': None, 'id': 'RES_WS_UPDATE_FILE_CONTENTS'}
+20200401-122043-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122043-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122048-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_VALIDATE_SESS'}
+20200401-122048-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'username': '10208958', 'is_admin': True, 'id': 'RES_WS_VALIDATE_SESS'}
+20200401-122050-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_endpoints', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122050-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  asdas\n  \n  asdas\n   asdsaasdasd\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122052-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'prometheus_rules', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122052-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  Rules:\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}\n\n\n', 'id': 'RES_WS_GET_FILE_CONTENTS'}
+20200401-122054-[INFO]-ControllerWSApp.py:21:: handleWebReq: {'file_name': u'alertmanager_config', 'session_key': u'2cf5c781dfa25fd764448fa585f66428a2dbe4f5a19a32b330af5c2093e27fa2', 'id': 'REQ_WS_GET_FILE_CONTENTS'}
+20200401-122054-[INFO]-ControllerWSApp.py:46:: >>>>> handleWeb response:{'status': '{\n  - 10.0.1.10\n  - 10.0.1.11\n  - 10.0.1.12\n}', 'id': 'RES_WS_GET_FILE_CONTENTS'}

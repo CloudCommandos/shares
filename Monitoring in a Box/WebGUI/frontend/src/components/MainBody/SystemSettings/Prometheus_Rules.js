@@ -1,8 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
 import $ from 'jquery';
 import SETTINGS from '../../../settings';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import RichTextEditor from 'react-rte';
+import Editor from 'react-simple-code-editor';
 
 var ajax_retrievePrometheusRules_timer = null;
 
@@ -16,24 +16,12 @@ export default class Prometheus_Rules extends React.Component {
 		    isDisplaying: false,
 		    displayTimestamp: Date.now(),
 		    minApiDelayMS: 500, //500ms
-		    fileContents: RichTextEditor.createEmptyValue(),
+		    fileContents: '',
 		};
 	}
 
-    /*static propTypes = {
-        onChange: PropTypes.func
-    };*/
-
     onChange = (value) => {
         this.setState({fileContents: value});
-        if (this.props.onChange) {
-            // Send the changes up to the parent component as an HTML string.
-            // This is here to demonstrate using `.toString()` but in a real app it
-            // would be better to avoid generating a string on each change.
-            this.props.onChange(
-                value.toString('html')
-            );
-        }
     };
 
     componentDidUpdate(){
@@ -136,9 +124,7 @@ export default class Prometheus_Rules extends React.Component {
     }
 
     uploadData(){
-        let tmpContents = this.state.fileContents.toString('markdown');
-        tmpContents = tmpContents.replace(/(?:\r\n|\r|\n)/g, '<br>');
-        tmpContents = tmpContents.replace(/\s/g, '&nbsp;');
+        let tmpContents = this.state.fileContents;
         let payload = {
             session_key: window.localStorage['session_key'],
             file_name: 'prometheus_rules',
@@ -306,49 +292,29 @@ export default class Prometheus_Rules extends React.Component {
 
     displayFileContents(fileContents){
         let context = this;
-        fileContents = fileContents.replace(/(?:\r\n|\r|\n)/g, '<br>');
-        fileContents = fileContents.replace(/\s/g, '&nbsp;');
         this.setState({
-            fileContents: RichTextEditor.createValueFromString(fileContents, 'html'),
+            fileContents: fileContents,
         });
     }
 
     render(){
-        const toolbarConfig = {
-            // Optionally specify the groups to display (displayed in the order listed).
-            display: [
-                //'INLINE_STYLE_BUTTONS',
-                //'BLOCK_TYPE_BUTTONS',
-                //'LINK_BUTTONS',
-                //'BLOCK_TYPE_DROPDOWN',
-                'HISTORY_BUTTONS'
-            ],
-            INLINE_STYLE_BUTTONS: [
-              {label: 'Bold', style: 'BOLD', className: 'custom-css-class'},
-              {label: 'Italic', style: 'ITALIC'},
-              {label: 'Underline', style: 'UNDERLINE'}
-            ],
-            BLOCK_TYPE_DROPDOWN: [
-              {label: 'Normal', style: 'unstyled'},
-              {label: 'Heading Large', style: 'header-one'},
-              {label: 'Heading Medium', style: 'header-two'},
-              {label: 'Heading Small', style: 'header-three'}
-            ],
-            BLOCK_TYPE_BUTTONS: [
-              {label: 'UL', style: 'unordered-list-item'},
-              {label: 'OL', style: 'ordered-list-item'}
-            ]
-        };
-
         return (
             <div className='MainContentWrapper'>
                 <p className='MainContentTitle2'>Prometheus Rules</p>
                 <div className='MainContentBody'>
-                    <span id='parameters-table-div' style={{color:'black'}}>
-                        <RichTextEditor
-                            toolbarConfig={toolbarConfig}
+                    <div id='parameters-table-div'>
+                        <Editor
                             value={this.state.fileContents}
-                            onChange={this.onChange}
+                            onValueChange={code => this.onChange(code)}
+                            highlight={code => function(){} }
+                            padding={10}
+                            style={{
+                              fontFamily: '"Fira code", "Fira Mono", monospace',
+                              fontSize: 14,
+                              backgroundColor:'#fafafa',
+                              height: '90%',
+                              color:'black'
+                            }}
                         />
                         <button className='BlueSubmitBtn' id='uploadBtn'
                             style={{float:'right', marginLeft:'10px'}}
@@ -362,7 +328,7 @@ export default class Prometheus_Rules extends React.Component {
                         >
                         Apply
                         </button>
-                    </span>
+                    </div>
                 </div>
             </div>
         )

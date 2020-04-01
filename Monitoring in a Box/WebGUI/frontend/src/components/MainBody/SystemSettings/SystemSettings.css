@@ -67,7 +67,6 @@
 
 /*PARAMETERS TABLE*/
 #parameters-table-div {
-    overflow: auto;
     height: 90%;
 }
 #parameters-table-div .rc-table-content table {
@@ -83,7 +82,7 @@
     background-color: rgba(255,80,80,0.5);
 }
 
-.RichTextEditor__root___2QXK- {
+/*.RichTextEditor__root___2QXK- {
   height: 90%;
 }
 .RichTextEditor__editor___1QqIU {
@@ -97,4 +96,9 @@
 .DraftEditor-editorContainer {
   height: 100%;
   overflow: auto;
+}
+*/
+.npm__react-simple-code-editor__textarea {
+  -webkit-text-fill-color: #282828 !important;
+  overflow: auto !important;
 }

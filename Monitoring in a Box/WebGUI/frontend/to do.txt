@@ -12,4 +12,4 @@ npm install svgo@1.3.0
 npm install -g serve@11.2.0
 npm install socket.io-client@2.3.0
 npm install rc-table@7.0.0-alpha.20
-npm install react-rte@0.16.1
+npm install react-simple-code-editor@0.11.0
