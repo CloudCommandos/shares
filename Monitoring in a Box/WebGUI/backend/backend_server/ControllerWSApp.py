@@ -317,10 +317,10 @@ class ControllerWSApp:
         #print(filepath)
         if (os.path.exists(filepath)):
             # for linux
-            # status = subprocess.run([str(filepath)]).returncode
+            status = subprocess.run([str(filepath)]).returncode
 
             # for windows
-            status = subprocess.call(['C:\\cygwin64\\bin\\bash.exe', '-l', str(filepath)])
+            #status = subprocess.call(['C:\\cygwin64\\bin\\bash.exe', '-l', str(filepath)])
 
         print('status is:', status)
         if status == 1:
