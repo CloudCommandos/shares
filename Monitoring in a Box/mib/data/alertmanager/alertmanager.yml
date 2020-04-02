@@ -1,0 +1,26 @@
+global:
+  resolve_timeout: 5m
+route:
+  receiver: 'slack-notifications'
+  group_by: [alertname, datacenter, app]
+  group_wait: 30s
+  group_interval: 1m
+  #  repeat_interval: 2m
+receivers:
+- name: 'slack-notifications'
+  slack_configs:
+    - channel: '#warning-alerts'
+      send_resolved: true
+      api_url: 'https://hooks.slack.com/services/your-api-key'  
+      username: '{{ template "slack.default.username" . }}'
+      color: '{{ if eq .Status "firing" }}danger{{ else }}good{{ end }}'
+      title: '{{ template "slack.default.title" . }}'
+      title_link: '{{ template "slack.default.titlelink" . }}'
+      text: >-
+        {{ range .Alerts }}
+          *Alert:* {{ .Labels.alertname }} - `{{ .Labels.severity }}`
+          *Description:* {{ .Annotations.message }}
+          *Details:*
+          {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
+          {{ end }}
+        {{ end }}

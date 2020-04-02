@@ -1,0 +1,22 @@
+# Sample config https://github.com/prometheus/prometheus/blob/master/config/testdata/conf.good.yml
+global:
+  scrape_interval: 10s
+  evaluation_interval: 15s
+
+# Load and evaluate rules in this file every 'evaluation_interval' seconds.
+rule_files:
+  - "alerts.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape.
+scrape_configs:
+  - job_name: 'physical-hosts'
+    honor_labels: true
+    file_sd_configs:
+      - files:
+          - target.yml
+alerting:
+  alertmanagers:
+    - scheme: http
+      static_configs:
+        - targets:
+          - 'alertmanager:9093'

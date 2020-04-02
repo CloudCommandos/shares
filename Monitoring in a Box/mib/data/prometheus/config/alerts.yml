@@ -1,0 +1,100 @@
+groups:
+- name: prometheus_pipeline_check
+  rules:
+  - alert: Watchdog
+    expr: vector(1)
+    labels:
+      severity: none
+    annotations:
+      message: |
+        This is an alert meant to ensure that the entire alerting pipeline is functional.
+        This alert is always firing, therefore it should always be firing in Alertmanager
+        and always fire against a receiver. There are integrations with various notification
+        mechanisms that send a notification when this alert is not firing. For example the
+        "DeadMansSnitch" integration in PagerDuty.
+# CRITICAL alerts for system health
+- name: system_health_critical
+  rules:
+  - alert: endpoint_down_critical
+    expr: up == 0
+    for: 10m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Endpoint is down"
+      message: "{{ $labels.instance }}: Endpoint has been down for more than 10min"
+
+  - alert: high_cpu_load_critical
+    expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[1m])) * 100) > 80
+    for: 20m
+    labels:
+      severity: critical
+    annotations:
+      summary: "CPU load(instance) >80% for more than 20min"
+      message: "This device's CPU usage has exceeded the thresold of 80% with a value of {{ humanize $value }} for 20 minutes."
+
+  - alert: high_memory_load_critical
+    # Prom has no function to remove labels, so Use the 'max' aggregator with 'by' clause to strip labels from the alert title
+    expr: |
+      avg by (instance) (
+        (
+          node_memory_MemTotal_bytes - (node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes)
+        ) / node_memory_MemTotal_bytes * 100
+      ) > 80
+    for: 20m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Memory load(instance) >80% for more than 20min"
+      message: "This device's Memory usage has exceeded the thresold of 80% with a value of {{ humanize $value }} for 20 minutes."
+
+- name: system_health_warning
+  rules:
+  - alert: endpoint_down_warning
+    expr: up == 0
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Endpoint is down"
+      message: "{{ $labels.instance }}: Endpoint has been down for more than 2min"
+
+  - alert: high_cpu_load_warning
+    expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[1m])) * 100) > 80
+    for: 10m
+    labels:
+      severity: warning
+    annotations:
+      summary: "CPU load >80% for more than 10min"
+      message: "This device's CPU usage has exceeded the thresold of 80% with a value of {{ humanize $value }} for 10 minutes."
+
+  - alert: high_memory_load_warning
+    # Prom has no function to remove labels, so Use the 'max' aggregator with 'by' clause to strip labels from the alert title
+    expr: |
+      max by (instance) (
+        (
+          node_memory_MemTotal_bytes - (node_memory_MemFree_bytes + node_memory_Buffers_bytes + node_memory_Cached_bytes)
+        ) / node_memory_MemTotal_bytes * 100
+      ) > 80
+    for: 10m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Memory load >80% for more than 10min"
+      message: "This device's Memory usage has exceeded the thresold of 80% with a value of {{ humanize $value }} for 10 minutes."
+
+  - alert: high_storage_load_on_root_warning
+    expr: |
+      max by (instance) (
+        (
+          node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}
+        ) / node_filesystem_size_bytes{mountpoint="/"} * 100
+      ) > 70
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Disk usage on / >70%"
+      message: "{{ $labels.instance }}: / disk usage >70%. Current usage is {{ humanize $value }}."
+
+
