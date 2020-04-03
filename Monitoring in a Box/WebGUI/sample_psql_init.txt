@@ -22,26 +22,11 @@ ALTER TABLE ONLY public.ws_users
     ADD CONSTRAINT ws_users_pkey PRIMARY KEY (username);
 
 insert into ws_users values(
-'10208958',
-'10208958', 
-'Chan Jiunn Yuan',
-'6583380976',
+'admin',
+'-', 
+'MIB Admin',
+'-',
 '7ab9f9bffd0f07cda1d9c5fc9b3e8789bc7218462a55f2122cb067fff199f0bd04f756c176a24c6b951d3301c2a84497f92b149b961f60f6ba9ebd4d748de5567474432d1e439c37c83a005f13f244c9b9427e1d2990cf0cfac5538e032699d2',
-'2020-01-01 00:00:00.00-00',
-'2020-01-01 00:00:00.00-00',
-'2020-01-01 00:00:00.00-00',
-0,
-'',
-true,
-false
-);
-
-insert into ws_users values(
-'10209078',
-'10209078',
-'Alex Ling',
-'6596443216',
-'d45409ee3d58fc3a26007bc0e7b6b3bf6f7973c1213e5c28a7af86375f93f2a2fc50de8f27ab8cd2c5ea376133fbd3e196ea4e7d3e7c64f64113800463dd0cf35ee271184bdfcc3237d40dbee282248e37c04490181d949272016ab063a65e5f',
 '2020-01-01 00:00:00.00-00',
 '2020-01-01 00:00:00.00-00',
 '2020-01-01 00:00:00.00-00',
