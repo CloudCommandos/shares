@@ -9,7 +9,7 @@ rule_files:
 
 # A scrape configuration containing exactly one endpoint to scrape.
 scrape_configs:
-  - job_name: 'physical-hosts'
+  - job_name: 'Target-hosts'
     honor_labels: true
     file_sd_configs:
       - files:
