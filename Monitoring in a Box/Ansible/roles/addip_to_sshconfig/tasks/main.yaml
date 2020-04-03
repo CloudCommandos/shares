@@ -1,0 +1,11 @@
+- name: Adding VM IP address into ssh config file
+  blockinfile:
+    path: /root/.ssh/config
+    block: |
+      Host {{item}}
+      {{SshJumpHost}}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{item}}"
+    state: present
+  loop: "{{NewVmIP}}"
+  run_once: true
+  delegate_to: 127.0.0.1

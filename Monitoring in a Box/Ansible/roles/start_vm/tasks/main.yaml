@@ -1,0 +1,9 @@
+- name: Start up created VMs
+  shell: "qm start {{item.0}}"
+  loop: "{{ NewVmID|zip(PveNode)|list }}"
+  when: ansible_hostname == item.1
+
+- name: Waiting for VMs to initialize, Please Wait for 1 minutes
+  pause: 
+    minutes: 1
+  run_once: true

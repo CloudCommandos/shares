@@ -1,0 +1,24 @@
+- name: Transfer docker files into VM
+  copy:
+    src: "{{item}}"
+    dest: /home/{{NewVmUsername}}/MiB
+    owner: mib
+    group: mib
+  with_items:
+    - ../mib/
+    - ../WebGUI
+
+#- name: Transfer webgui files into VM
+#  copy:
+#    src: ../WebGUI
+#    dest: /home/{{NewVmUsername}}/MiB3
+    
+
+#- name: copy webgui file into mib vm
+#  expect:
+#    command: scp -r ../WebGUI {{NewVmUsername}}@{{item}}:~/MiB3/
+#    responses:
+#      "'s password:": "{{NewVmPassword}}"
+#  loop: "{{NewVmIP}}"
+#  run_once: true
+#  delegate_to: 127.0.0.1
