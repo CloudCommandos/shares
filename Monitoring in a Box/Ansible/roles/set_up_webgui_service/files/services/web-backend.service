@@ -1,0 +1,14 @@
+[Unit]
+Description=Web GUI Backend Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+WorkingDirectory=/home/mib/MiB/WebGUI/backend/backend_server/
+ExecStart=/usr/bin/python IssMain.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target

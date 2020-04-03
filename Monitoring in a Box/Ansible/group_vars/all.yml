@@ -1,0 +1,63 @@
+##################################
+## Variables for creation of VM ##
+##################################
+
+## Target PVE node for deployment of VM
+PveNode:
+  - pve5
+
+## Template name
+TemplateName: Ubuntu-18.04-ssh-pass-auth-enabled-Cloud-Image
+
+## New VM ID number
+NewVmID:
+  - "240"
+
+## New VM name
+NewVmName:
+  - "MiB-Host"
+
+## Additional options for VM clone function
+# Command to add VM into resource pool. Comment to turn it off
+AddResourcePool: #--pool ansible-workshop
+
+## Command to create a full clone vm. Comment to change to linked clone
+CreateFullClone: --full true
+
+## Which hypervisor storage to use
+# local
+# local-zfs
+# sgpools
+TargetStorage: local
+
+## Which image format to use
+# qcow2
+# vmdk
+# raw
+ImageFormat: vmdk
+
+## New account username
+NewVmUsername: mib
+
+## New account password
+NewVmPassword: [key in a password]
+
+## VM's Vlan Tag
+# Change the number after the "=" sign to the desired Vlan number, Comment away if Vlan is not required
+VlanTag: #",tag=88"
+
+## VM's IP address
+NewVmIP:
+  - 10.0.1.240
+
+### Network gateway ###
+GwIP: 10.0.1.5
+
+## DNS server IP addresses
+DNSIP: 10.0.1.53
+
+## DNS server search domain
+DNSdomain: example.com
+
+## SSH Jumphost
+SshJumpHost: ProxyJump [key in the public ip and port number]

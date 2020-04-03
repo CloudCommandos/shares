@@ -1,0 +1,33 @@
+- name: Create symbolic link to prometheus targets config in backend server directory
+  file:
+    src: /home/{{NewVmUsername}}/MiB/data/{{item.src}}
+    dest: /home/{{NewVmUsername}}/MiB/WebGUI/backend/backend_server/scripts/{{item.dest}}
+    state: link
+    owner: mib
+    group: mib
+    force: yes
+    follow: no
+  with_items:
+    - { src: 'prometheus/config/target.yml', dest: 'prometheus_endpoints.yml' }
+    - { src: 'prometheus/config/alerts.yml', dest: 'prometheus_rules.yml' }
+    - { src: 'alertmanager/alertmanager.yml', dest: 'alertmanager_config.yml' }
+
+#- name: Create symbolic link to prometheus targets config in backend server directory
+#  file:
+#    src: /home/{{NewVmUsername}}/MiB3/data/prometheus/config/alerts.yml
+#    dest: /home/{{NewVmUsername}}/MiB3/WebGUI/backend/backend_server/scripts/prometheus_rules.yml
+#    state: link
+#    owner: mib
+#    group: mib
+#    force: yes
+#    follow: no
+#
+#- name: Create symbolic link to prometheus targets config in backend server directory
+#  file:
+#    src: /home/{{NewVmUsername}}/MiB3/data/alertmanager/alertmanager.yml
+#    dest: /home/{{NewVmUsername}}/MiB3/WebGUI/backend/backend_server/scripts/alertmanager_config.yml
+#    owner: mib
+#    group: mib
+#    state: link
+#    force: yes
+#    follow: no
