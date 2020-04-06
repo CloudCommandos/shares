@@ -16,7 +16,7 @@ export default class Prometheus_Rules extends React.Component {
 		    isDisplaying: false,
 		    displayTimestamp: Date.now(),
 		    minApiDelayMS: 500, //500ms
-		    fileContents: '',
+		    fileContents: "",
 		};
 	}
 
@@ -227,10 +227,6 @@ export default class Prometheus_Rules extends React.Component {
             popupConfirmation: {
                 show: false,
                 title: '',
-                yesCallback: '',
-                yesButtonValue: '',
-                noCallback: '',
-                noButtonValue: '',
                 mode: 'admin',
                 hasCloseBtn: false,
             }
@@ -257,24 +253,58 @@ export default class Prometheus_Rules extends React.Component {
             success: function(data){
                 if (data.status === "success"){
                     let res = JSON.parse(data.res);
-                    //show success popup
-                    context.props.setPopupState({
-                        popup1: {
-                            show: true,
-                            title: 'Reloaded',
-                            content: '',
-                            mode: 'admin',
-                            hasCloseBtn: true,
-                        }
-                    }, "Prometheus_Rules");
+                    if (res.status === 0){
+                        //show success popup
+                        context.props.setPopupState({
+                            popup1: {
+                                show: true,
+                                title: 'Reloaded',
+                                content: '',
+                                mode: 'admin',
+                                hasCloseBtn: true,
+                            }
+                        }, "Prometheus_Rules");
+                    }else if (res.status === 1){
+                        //show failure popup
+                        context.props.setPopupState({
+                            popup1: {
+                                show: true,
+                                title: 'Failed to reload',
+                                content: 'The new configuration is rejected by the server!',
+                                mode: 'admin',
+                                hasCloseBtn: true,
+                            }
+                        }, "Prometheus_Rules");
+                    }else{
+                        //show failure popup
+                        context.props.setPopupState({
+                            popup1: {
+                                show: true,
+                                title: 'Failed to reload',
+                                content: 'Server script has error(s)!',
+                                mode: 'admin',
+                                hasCloseBtn: true,
+                            }
+                        }, "Prometheus_Rules");
+                    }
                 }else{
 
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log("failed!");
+                //show failure popup
+                context.props.setPopupState({
+                    popup1: {
+                        show: true,
+                        title: 'Failed to reload',
+                        content: 'Unable to connect to server or the server has an internal error!',
+                        mode: 'admin',
+                        hasCloseBtn: true,
+                    }
+                }, "Prometheus_Rules");
             },complete: function(){
-                setTimeout(function(){
+                /*setTimeout(function(){
                     //remove spinner popup
                     context.props.setPopupState({
                         popup1: {
@@ -285,7 +315,7 @@ export default class Prometheus_Rules extends React.Component {
                             hasCloseBtn: true,
                         }
                     }, "Prometheus_Rules");
-                }, 500);
+                }, 500);*/
             }
         });
     }

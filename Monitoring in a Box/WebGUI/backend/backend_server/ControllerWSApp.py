@@ -323,8 +323,6 @@ class ControllerWSApp:
             #status = subprocess.call(['C:\\cygwin64\\bin\\bash.exe', '-l', str(filepath)])
 
         print('status is:', status)
-        if status == 1:
-            return self.generate_ko_msg(status)
 
         response = {'id': self.jmf.ID_MAP['RES_WS_RELOAD_SERVICE'],
                     'status': status}
