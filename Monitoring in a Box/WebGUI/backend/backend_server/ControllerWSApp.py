@@ -344,6 +344,12 @@ class ControllerWSApp:
             filename = 'prometheus_rules.yml';
         elif (file_name == 'alertmanager_config'):
             filename = 'alertmanager_config.yml';
+        elif (file_name == 'prometheus_endpoints_draft'):
+            filename = 'prometheus_endpoints_draft.yml';
+        elif (file_name == 'prometheus_rules_draft'):
+            filename = 'prometheus_rules_draft.yml';
+        elif (file_name == 'alertmanager_config_draft'):
+            filename = 'alertmanager_config_draft.yml';
 
         if (filename == ''):
             return self.generate_ko_msg('Wrong file_name')
@@ -376,12 +382,12 @@ class ControllerWSApp:
 
         # Determine target filename
         filename = ''
-        if (file_name == 'prometheus_endpoints'):
-            filename = 'prometheus_endpoints.yml';
-        elif (file_name == 'prometheus_rules'):
-            filename = 'prometheus_rules.yml';
-        elif (file_name == 'alertmanager_config'):
-            filename = 'alertmanager_config.yml';
+        if (file_name == 'prometheus_endpoints_draft'):
+            filename = 'prometheus_endpoints_draft.yml';
+        elif (file_name == 'prometheus_rules_draft'):
+            filename = 'prometheus_rules_draft.yml';
+        elif (file_name == 'alertmanager_config_draft'):
+            filename = 'alertmanager_config_draft.yml';
 
         if (filename == ''):
             return self.generate_ko_msg('Wrong file_name')

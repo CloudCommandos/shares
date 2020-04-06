@@ -33,14 +33,14 @@ export default class Alertmanager_Config extends React.Component {
                 });
 
                 if (this.props.systemSettingsNavState.alertmanager_config_selected && !this.state.initialized){
-                    this.alertmanagerConfigApiQueue();
+                    this.alertmanagerConfigApiQueue_retrieveData(0);
                     this.setState({
                         initialized: true,
                     });
                 }
             }
             if (this.state.isDisplaying && this.state.initialized && this.props.globalState.socket_alertmanager_config_updated){
-                this.alertmanagerConfigApiQueue();
+                this.alertmanagerConfigApiQueue_retrieveData(0);
                 this.props.setGlobalState({
                     socket_alertmanager_config_updated: false,
                 }, "Alertmanager_Config");
@@ -48,19 +48,20 @@ export default class Alertmanager_Config extends React.Component {
         }
     }
 
-    alertmanagerConfigApiQueue(){
+    alertmanagerConfigApiQueue_retrieveData(mode){
         let context = this;
         clearTimeout(ajax_retrieveAlertmanagerConfig_timer);  //reset ajax call timer
         ajax_retrieveAlertmanagerConfig_timer = setTimeout(function(){
-            context.retrieveData()}
+            context.retrieveData(mode)}
         , context.state.minApiDelayMS);
     }
 
-    retrieveData(){
+    retrieveData(mode){
         let payload = {
             session_key: window.localStorage['session_key'],
-            file_name: 'alertmanager_config',
+            file_name: (mode === 1 ? 'alertmanager_config' : "alertmanager_config_draft"),
         }
+        console.log(payload);
         let context = this;
 
         //Show spinner in popup
@@ -82,6 +83,7 @@ export default class Alertmanager_Config extends React.Component {
             dataType: 'json',
             contentType: 'application/json',
             success: function(data){
+                console.log(data);
                 if (data.status === "success"){
                     let res = JSON.parse(data.res);
                     context.displayFileContents(res.status);
@@ -127,7 +129,7 @@ export default class Alertmanager_Config extends React.Component {
         let tmpContents = this.state.fileContents;
         let payload = {
             session_key: window.localStorage['session_key'],
-            file_name: 'alertmanager_config',
+            file_name: 'alertmanager_config_draft',
             contents: tmpContents,
         }
         let context = this;
@@ -350,13 +352,25 @@ export default class Alertmanager_Config extends React.Component {
                             style={{float:'right', marginLeft:'10px'}}
                             onClick={this.reloadServiceConfirmation.bind(this)}
                         >
-                        Reload Alertmanager
+                        Apply draft and Reload Alertmanager
                         </button>
                         <button className='GreenSubmitBtn' id='uploadBtn'
-                            style={{float:'right'}}
+                            style={{float:'right', marginLeft:'10px'}}
                             onClick={this.uploadDataConfirmation.bind(this)}
                         >
-                        Apply
+                        Save draft
+                        </button>
+                        <button className='GreySubmitBtn' id='uploadBtn'
+                            style={{float:'right', marginLeft:'10px'}}
+                            onClick={function(){this.alertmanagerConfigApiQueue_retrieveData(0)}.bind(this)}
+                        >
+                        Retrieve saved draft
+                        </button>
+                        <button className='GreySubmitBtn' id='uploadBtn'
+                            style={{float:'right'}}
+                            onClick={function(){this.alertmanagerConfigApiQueue_retrieveData(1)}.bind(this)}
+                        >
+                        Retrieve last applied config
                         </button>
                     </div>
                 </div>

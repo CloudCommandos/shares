@@ -1,3 +1,20 @@
+.GreySubmitBtn {
+    color: white;
+    background-color: rgb(80, 80, 80);
+    border: none;
+    padding: 1em;
+    opacity: 0.85;
+    font-weight: bold;
+}
+
+.GreySubmitBtn:hover {
+    opacity: 1;
+}
+
+.GreySubmitBtn:disabled {
+    opacity: 0.5;
+}
+
 .GreenSubmitBtn {
     color: white;
     background-color: rgb(45, 180, 45);
