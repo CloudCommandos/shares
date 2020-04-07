@@ -14,7 +14,7 @@
     - role: register_fingerprint
       tags: register_fingerprint
 
-- name: Setup MiB  
+- name: Setup MiB
   hosts:
     mib_host
   become: yes
@@ -31,6 +31,6 @@
       tags: set_up_postgresql
     - role: set_up_webgui_service
       tags: set_up_webgui_service
-    #- role: stop_vm
-    #  tags: stop_vm
+    - role: set_up_mib_service
+      tags: set_up_mib_service
   tags: mib_host_task

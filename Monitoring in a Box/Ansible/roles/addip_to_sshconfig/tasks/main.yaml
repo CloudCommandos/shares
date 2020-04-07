@@ -4,6 +4,10 @@
     block: |
       Host {{item}}
       {{SshJumpHost}}
+      LocalForward 3000 localhost:3000
+      LocalForward 4000 localhost:4000
+      LocalForward 5000 localhost:5000
+      LocalForward 9090 localhost:9090
     marker: "# {mark} ANSIBLE MANAGED BLOCK {{item}}"
     state: present
   loop: "{{NewVmIP}}"

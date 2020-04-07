@@ -3,27 +3,6 @@
   shell: "while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 1; done;"
   changed_when: False
 
-- name: Add apt-key for docker-ubuntu repo
-  apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
-    state: present
-
-- name: Add docker-ubuntu repo
-  apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
-    state: present
-
-- name: Install docker-ce package
-  apt:
-    name: docker-ce
-    state: present
-
-- name: Install docker-compose package
-  get_url:
-    url: https://github.com/docker/compose/releases/download/1.25.4/docker-compose-{{ansible_system}}-{{ansible_userspace_architecture}}
-    dest: /usr/local/bin/docker-compose
-    mode: +x
-
 - name: apt install dependencies
   apt:
     name:
@@ -34,6 +13,7 @@
       - nodejs
       - npm
       - postgresql
+      - docker.io
 
 - name: npm install dependencies
   npm:
@@ -44,10 +24,13 @@
     - webpack
     - webpack-dev-server
 
-- name: pip install requirements
+- name: pip install dependencies
+  pip:
+    name:
+      - ansible==2.9
+      - docker==4.2.0
+      - docker-compose==1.25.4
+
+- name: pip install webgui requirements
   pip:
     requirements: /home/{{NewVmUsername}}/MiB/WebGUI/backend/backend_server/requirements.txt
-
-- name: Install Ansible package
-  pip:
-    name: ansible==2.9
