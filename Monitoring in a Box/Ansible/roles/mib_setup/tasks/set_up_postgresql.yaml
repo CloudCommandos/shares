@@ -1,7 +1,6 @@
 - name: create mib database
   postgresql_db:
     name: mib
-    #login_password: 12345
   become_user: postgres
 
 - name: change postgres password
@@ -9,16 +8,8 @@
     db: mib
     name: postgres
     password: 12345
-    #login_password: 12345
   become_user: postgres
 
 - name: create mib account on webgui
-  shell: psql -U postgres -d mib -f /home/{{NewVmUsername}}/MiB/WebGUI/sample_psql_init.txt
+  shell: psql -U postgres -d mib -f /opt/MiB/WebGUI/sample_psql_init.txt
   become_user: postgres
-
-#- name: create mib account on webgui
-#  expect:
-#    command: psql -U postgres -d mib -f /home/{{NewVmUsername}}/MiB/WebGUI/sample_psql_init.txt
-#    responses:
-#      "Password for user": 12345 #"{{NewVmPassword}}"
-#  become_user: postgres

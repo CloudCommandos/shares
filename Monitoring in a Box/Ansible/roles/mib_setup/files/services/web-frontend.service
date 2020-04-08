@@ -6,7 +6,7 @@ After=multi-user.target
 Type=simple
 Restart=always
 RestartSec=3
-WorkingDirectory=/home/mib/MiB/WebGUI/frontend
+WorkingDirectory=/opt/MiB/WebGUI/frontend
 ExecStart=/usr/local/bin/serve -s build
 StandardInput=tty-force
 

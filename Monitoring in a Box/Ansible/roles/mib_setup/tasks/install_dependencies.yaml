@@ -27,10 +27,9 @@
 - name: pip install dependencies
   pip:
     name:
-      - ansible==2.9
       - docker==4.2.0
       - docker-compose==1.25.4
 
 - name: pip install webgui requirements
   pip:
-    requirements: /home/{{NewVmUsername}}/MiB/WebGUI/backend/backend_server/requirements.txt
+    requirements: /opt/MiB/WebGUI/backend/backend_server/requirements.txt
