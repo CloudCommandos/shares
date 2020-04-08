@@ -5,32 +5,11 @@
   roles:
     - role: create_vm
       tags: create_vm
-    - role: create_useraccount
-      tags: create_useraccount
-    - role: start_vm
-      tags: start_vm
-    - role: addip_to_sshconfig
-      tags: addip_to_sshconfig
-    - role: register_fingerprint
-      tags: register_fingerprint
 
 - name: Setup MiB
   hosts:
     mib_host
   become: yes
   roles:
-    - role: transfer_mib_file
-      tags: transfer_mib_file
-    - role: install_dependencies
-      tags: install_dependencies
-    - role: create_symlink_to_config_files
-      tags: create_symlink_to_config_files
-    - role: remove_netconfig_macaddress_dependency
-      tags: remove_netconfig_macaddress_dependency
-    - role: set_up_postgresql
-      tags: set_up_postgresql
-    - role: set_up_webgui_service
-      tags: set_up_webgui_service
-    - role: set_up_mib_service
-      tags: set_up_mib_service
-  tags: mib_host_task
+    - role: mib_setup
+      tags: mib_setup

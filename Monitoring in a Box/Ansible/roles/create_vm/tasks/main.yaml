@@ -1,39 +1,14 @@
-######################################
-###Check if VM ID is already in use###
-######################################
+- name: Spin off new vm
+  import_tasks: spinoff_vm.yaml
 
-- name: Checking existing VMs ID.
-  shell: "pvesh get /cluster/resources --type vm | awk '{print $2}'" 
-  changed_when: false
-  register: IDList
-  run_once: true
-  check_mode: no
-  tags: always
+- name: Create useraccount using cloudinit feature
+  import_tasks: create_useraccount.yaml
 
-- name: Check if selected VM IDs are already in use.
-  debug:
-    msg: 
-      - " VM ID {{ item }} has already been used "
-      - " Please look at the 'NewVmID' segment in the variable file and edit accordingly "
-  loop: "{{NewVmID}}"
-  when: IDList.stdout.find(item) != -1
-  changed_when: true
-  register: IDresult
-  run_once: true
-  tags: always
+- name: Start up vm
+  import_tasks: start_vm.yaml
 
-- meta: end_play
-  when: IDresult.changed == true
+- name: Add IP address to ssh/config file
+  import_tasks: addip_to_sshconfig.yaml
 
-####################################
-###Create VMs using the Templates###
-####################################
-
-- name: Gathering each nodes template ID
-  shell: "qm list | grep {{TemplateName}} | awk '{print$1}'"
-  register: templateID
-
-- name: Cloning a VM using Cloud-Init template
-  shell: "qm clone {{templateID.stdout}} {{item.0}} --name {{item.1}} {{CreateFullClone}} {{AddResourcePool}} --storage {{TargetStorage}} --format {{ImageFormat}}"
-  loop: "{{ NewVmID|zip(NewVmName,PveNode)|list }}"
-  when: ansible_hostname == item.2
+- name: Register fingerprint
+  import_tasks: register_fingerprint.yaml
