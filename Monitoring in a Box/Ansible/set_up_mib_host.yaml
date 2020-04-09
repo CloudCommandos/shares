@@ -1,15 +1,10 @@
-- name: Create MiB VM using Cloud-Init Image Template
-  hosts:
-    pve_node
-  become: yes
-  roles:
-    - role: create_vm
-      tags: create_vm
-
 - name: Setup MiB
   hosts:
     mib_host
   become: yes
+  gather_facts: no
   roles:
+    - role: create_vm
+      tags: create_vm
     - role: mib_setup
       tags: mib_setup

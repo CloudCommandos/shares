@@ -1,17 +1,5 @@
-### Which Proxmox Node to run the task on ###
-[pve_node]
-pve0
-pve1
-pve2
-pve3
-pve4
-pve5
-
-[pve_node:vars]
-ansible_become_pass=[key in your sudo password]
-
 [mib_host]
-mib@10.0.1.240
+mib1  ansible_user=mib	ansible_host=10.0.1.240
 
 [mib_host:vars]
-ansible_become_pass=[key in the password set for mib vm]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q 111.223.106.169 -p 22222"'

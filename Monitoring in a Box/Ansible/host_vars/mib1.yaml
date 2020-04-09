@@ -1,0 +1,23 @@
+## Which image format to use
+# qcow2
+# vmdk
+# raw
+ImageFormat: vmdk
+
+## New VM ID number
+NewVmID: "240"
+
+## New VM name
+NewVmName: "MiB-Host"
+
+## New account username
+NewVmUsername: mib
+
+## Pve node sudo password
+ansible_become_pass: [key in pve node sudo password]
+
+## New account password must be the same as pve node sudo password
+NewVmPassword: "{{ansible_become_pass}}"
+
+## VM's IP address
+NewVmIP: 10.0.1.240
