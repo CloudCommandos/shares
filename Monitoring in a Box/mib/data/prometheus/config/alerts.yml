@@ -97,4 +97,51 @@ groups:
       summary: "Disk usage on / >70%"
       message: "{{ $labels.instance }}: / disk usage >70%. Current usage is {{ humanize $value }}."
 
+# CRITICAL alerts for windows server
+- name: windows_server_critical
+  rules:
+  - alert: windows_server_high_cpu_load_critical
+    expr: 100 - (avg by (instance) (rate(wmi_cpu_time_total{mode="idle"}[2m])) * 100) > 80
+    for: 20m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Windows Server CPU load (instance {{ $labels.instance }})"
+      message: "CPU Usage is more than 80% for 20 minutes\n  VALUE = {{ humanize $value }}\n  LABELS: {{ $labels }}"
 
+  - alert: windows_server_high_memory_load_critical
+    expr: 100 - 100 * wmi_os_physical_memory_free_bytes / wmi_cs_physical_memory_bytes > 80
+    for: 20m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Windows Server memory load (instance {{ $labels.instance }})"
+      message: "Memory usage is more than 80% for 20 minutues\n  VALUE = {{ humanize $value }}\n  LABELS: {{ $labels }}"
+
+# WARNING alerts for windows servers
+- name: windows_server_warning
+  rules:
+  - alert: windows_server_high_cpu_load_warning
+    expr: 100 - (avg by (instance) (rate(wmi_cpu_time_total{mode="idle"}[2m])) * 100) > 8
+    for: 1m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Windows Server CPU load (instance {{ $labels.instance }})"
+      message: "CPU Usage is more than 80% for 10 minutes\n  VALUE = {{ humanize $value }}\n  LABELS: {{ $labels }}"
+
+  - alert: windows_server_high_memory_load_warning
+    expr: 100 - 100 * wmi_os_physical_memory_free_bytes / wmi_cs_physical_memory_bytes > 8
+    for: 10m
+    labels:
+      severity: warning    annotations:      summary: "Windows Server memory load (instance {{ $labels.instance }})"
+      message: "Memory usage is more than 80% for 10 minutes\n  VALUE = {{ humanize $value }}\n  LABELS: {{ $labels }}"
+      
+  - alert: windows_server_disk_storage_warning
+    expr: 100.0 - 100 * ((wmi_logical_disk_free_bytes{} / 1024 / 1024 ) / (wmi_logical_disk_size_bytes{} / 1024 / 1024)) > 10
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Windows Server disk storage (instance {{ $labels.instance }})"
+      message: "Disk storage is more than 80%\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
