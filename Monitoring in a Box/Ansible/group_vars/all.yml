@@ -30,9 +30,6 @@ DNSIP: 10.0.1.53
 ## DNS server search domain
 DNSdomain: example.com
 
-## SSH Jumphost
-SshJumpHost: ProxyJump 111.223.106.169:22222
-
 DBpass: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           32393339373438313935656365646337316466386635316164323533656138323230343862373032
