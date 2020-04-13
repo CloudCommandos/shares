@@ -1,6 +1,9 @@
 - name: Transfer MiB files to vm
   import_tasks: transfer_mib_file.yaml
 
+- name: Transfer WebGui template config file to vm
+  import_tasks: transfer_template_file.yaml
+
 - name: Install dependencies on vm
   import_tasks: install_dependencies.yaml
 
