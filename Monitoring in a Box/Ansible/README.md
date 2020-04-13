@@ -8,10 +8,6 @@ There are a few files which requires some input before the ansible script can be
     1. `ansible_become_pass` - Key in the sudo password of pve node 5
     1. `NewVmIP` - Set the ip address of the MiB VM(Ensure no repeat in the cluster)
 
-1. In `inventory.yaml` file fill in the following conditions:
-    1. Fill in the `ansible_user` with the login user set in `NewVmUsername`
-    1. Fill in the `ansible_host` with the IP address set in `NewVmIP`
-
 1. Create `.vault` file and fill it with the password provided.
 
 1. In `roles/create_useraccount/files/sshpubkeys` file, enter the public key of your ansible host machine. This is to set up ssh pasword-less login to the MiB VM.
