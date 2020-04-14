@@ -38,8 +38,6 @@ services:
       TZ: Asia/Singapore
     ports:
       - "9093:9093"
-    networks:
-      - default
 
   grafana:
     restart: always
