@@ -17,11 +17,14 @@ NewVmUsername: mib
 ## VM's IP address
 NewVmIP: 10.0.1.240
 
-# Pve node sudo password
-ansible_become_pass: [key in pve node sudo password]
-
-## New account password must be the same as pve node sudo password
-NewVmPassword: "{{ansible_become_pass}}"
+## VM's password
+NewVmPassword: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          37323333373131323336366138316663653363363437643166326530316432376566303363323461
+          3861336266633465616138623634313038316663653034660a303832333862633331623231343963
+          62646266626439346531373364616661393632386633643935323863336431363762633864303965
+          3138626430663739340a633136366466653965653138386332663535626539323264373361333564
+          6537
 
 # SSH VM username
 ansible_user: "{{NewVmUsername}}"

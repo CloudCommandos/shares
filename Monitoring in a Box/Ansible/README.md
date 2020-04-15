@@ -14,5 +14,6 @@ There are a few files which requires some input before the ansible script can be
 
 When the config are set up, run the following commands to create and deploy MiB VM:
 ```
-ansible-playbook -i inventory.yaml set_up_mib_host.yaml
+ansible-playbook -Ki inventory.yaml set_up_mib_host.yaml
 ```
+- Ansible will prompt for `become` password, key in your pve5 sudo password.
