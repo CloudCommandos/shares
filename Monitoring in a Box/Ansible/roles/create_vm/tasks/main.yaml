@@ -1,14 +1,12 @@
-- name: Spin off new vm
-  import_tasks: spinoff_vm.yaml
+- name: Create a vm for MiB setup
+  block:
+  - name: Spin off new vm
+    import_tasks: spinoff_vm.yaml
 
-- name: Create useraccount using cloudinit feature
-  import_tasks: create_useraccount.yaml
+  - name: Create useraccount using cloudinit feature
+    import_tasks: create_useraccount.yaml
 
-- name: Start up vm
-  import_tasks: start_vm.yaml
+  - name: Start up vm
+    import_tasks: start_vm.yaml
 
-- name: Add IP address to ssh/config file
-  import_tasks: addip_to_sshconfig.yaml
-
-- name: Register fingerprint
-  import_tasks: register_fingerprint.yaml
+  delegate_to: "{{PveNode}}"

@@ -3,8 +3,6 @@
     src: /opt/MiB/data/{{item.src}}
     dest: /opt/MiB/WebGUI/backend/backend_server/scripts/{{item.dest}}
     state: link
-    owner: mib
-    group: mib
     force: yes
     follow: no
   with_items:

@@ -1,17 +1,2 @@
-### Which Proxmox Node to run the task on ###
-[pve_node]
-pve0
-pve1
-pve2
-pve3
-pve4
-pve5
-
-[pve_node:vars]
-ansible_become_pass=[key in your sudo password]
-
 [mib_host]
-mib@10.0.1.240
-
-[mib_host:vars]
-ansible_become_pass=[key in the password set for mib vm]
+mib1

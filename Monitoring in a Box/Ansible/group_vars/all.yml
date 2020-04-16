@@ -1,21 +1,8 @@
-##################################
-## Variables for creation of VM ##
-##################################
-
 ## Target PVE node for deployment of VM
-PveNode:
-  - pve5
+PveNode: pve5
 
 ## Template name
 TemplateName: Ubuntu-18.04-ssh-pass-auth-enabled-Cloud-Image
-
-## New VM ID number
-NewVmID:
-  - "240"
-
-## New VM name
-NewVmName:
-  - "MiB-Host"
 
 ## Additional options for VM clone function
 # Command to add VM into resource pool. Comment to turn it off
@@ -30,25 +17,9 @@ CreateFullClone: --full true
 # sgpools
 TargetStorage: local
 
-## Which image format to use
-# qcow2
-# vmdk
-# raw
-ImageFormat: vmdk
-
-## New account username
-NewVmUsername: mib
-
-## New account password
-NewVmPassword: [key in a password]
-
 ## VM's Vlan Tag
 # Change the number after the "=" sign to the desired Vlan number, Comment away if Vlan is not required
 VlanTag: #",tag=88"
-
-## VM's IP address
-NewVmIP:
-  - 10.0.1.240
 
 ### Network gateway ###
 GwIP: 10.0.1.5
@@ -59,5 +30,28 @@ DNSIP: 10.0.1.53
 ## DNS server search domain
 DNSdomain: example.com
 
-## SSH Jumphost
-SshJumpHost: ProxyJump [key in the public ip and port number]
+## SSH jumphost option
+ansible_ssh_common_args: '-o ProxyCommand="ssh -W %h:%p -q {{JumphostIP}} -p {{JumphostPort}}"'
+
+JumphostIP: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66383462633164623361666664663463346538383036393833363661643333636532343861623039
+          3133353734366262616138613639646231646438333538370a636438333161326338626366376161
+          38346362623864366134356564353466613064633661633637303564306332376666653234643235
+          6238376536303863640a366662646263396434393739336362376339366534306334306466656137
+          6633
+JumphostPort: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          62306266386165663766656330623735353361613335346534633764373431323632353735653262
+          6133653765366634303434626635333635396430323938660a363564393362633839373931373038
+          66376131336236373132616462386236303334333632353336343338313833376535666335666366
+          6436613339623262630a656136393833373962333263356165383864663534313363303266333062
+          3661
+
+DBpass: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          32393339373438313935656365646337316466386635316164323533656138323230343862373032
+          3062373738363362393532626262343237333137346534350a616461366665653462383630313665
+          33613936663864343834643838376365356633643362623534326264306537373165623539616363
+          6633393132623537380a363863333333323761373232396438323530666133396366383538643436
+          3463
