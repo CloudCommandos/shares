@@ -21,3 +21,6 @@
 
 - name: Set up MiB service
   import_tasks: set_up_mib_service.yaml
+
+- name: Set MiB password to expired
+  import_tasks: set_expire_password.yaml
