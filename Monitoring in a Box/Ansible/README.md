@@ -10,7 +10,7 @@ There are a few files which requires some input before the ansible script can be
 
 1. Create `.vault` file and fill it with the password provided.
 
-1. In `roles/create_useraccount/files/sshpubkeys` file, enter the public key of your ansible host machine. This is to set up ssh pasword-less login to the MiB VM.
+1. In `user_ssh_pub_key.txt` file, enter end user's ssh public key. This is to set up ssh password-less login to the MiB VM. (leave empty if user's public key is unknown)
 
 When the config are set up, run the following commands to create and deploy MiB VM:
 ```

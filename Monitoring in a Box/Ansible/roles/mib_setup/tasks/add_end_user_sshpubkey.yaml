@@ -1,0 +1,11 @@
+- name: remove root ssh authorized keys
+  file:
+    path: /root/.ssh/authorized_keys
+    state: absent
+
+- name: add end user's ssh public key to MiB VM
+  authorized_key:
+    user: "{{NewVmUsername}}"
+    state: present
+    key: "{{ lookup('file', './user_ssh_pub_key.txt') }}"
+    exclusive: true
