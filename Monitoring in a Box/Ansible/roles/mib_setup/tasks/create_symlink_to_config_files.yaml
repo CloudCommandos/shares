@@ -6,6 +6,6 @@
     force: yes
     follow: no
   with_items:
-    - { src: 'prometheus/config/target.yml', dest: 'prometheus_endpoints.yml' }
+    - { src: 'prometheus/config/targets.yml', dest: 'prometheus_endpoints.yml' }
     - { src: 'prometheus/config/alerts.yml', dest: 'prometheus_rules.yml' }
     - { src: 'alertmanager/alertmanager.yml', dest: 'alertmanager_config.yml' }

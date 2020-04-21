@@ -5,7 +5,6 @@ There are a few files which requires some input before the ansible script can be
     1. `ImageFormat` - Set the image type for the MiB VM
     1. `NewVmID` - Set the id number of the MiB VM to be created(Ensure no repeat in the cluster)
     1. `NewVmUsername` - Set the login user for MiB VM
-    1. `ansible_become_pass` - Key in the sudo password of pve node 5
     1. `NewVmIP` - Set the ip address of the MiB VM(Ensure no repeat in the cluster)
 
 1. Create `.vault` file and fill it with the password provided.
