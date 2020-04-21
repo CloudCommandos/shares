@@ -1,0 +1,15 @@
+- name: create mib database
+  postgresql_db:
+    name: mib
+  become_user: postgres
+
+- name: change postgres password
+  postgresql_user:
+    db: mib
+    name: postgres
+    password: "{{DBpass}}"
+  become_user: postgres
+
+- name: create mib account on webgui
+  shell: psql -U postgres -d mib -f /opt/MiB/WebGUI/sample_psql_init.txt
+  become_user: postgres

@@ -13,7 +13,7 @@ scrape_configs:
     honor_labels: true
     file_sd_configs:
       - files:
-          - target.yml
+          - targets.yml
 alerting:
   alertmanagers:
     - scheme: http

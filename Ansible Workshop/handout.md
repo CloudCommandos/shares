@@ -59,6 +59,7 @@ sudo apt install ansible
     ```
 
 <div style="page-break-after: always;"></div>
+
 ---
 ## 3. Hands-On Exercises
 Before the start of the hands-on exercise, run the following command to create the `ansible-workshop` directory to work in (Replace 'X' with the number assigned to you):

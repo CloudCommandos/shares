@@ -1,0 +1,10 @@
+- name: remove mac address parameter
+  lineinfile:
+    path: /etc/netplan/50-cloud-init.yaml
+    regexp: "{{item}}"
+    state: absent
+  with_items:
+    - '\smatch:'
+    - '\smacaddress:'
+    - '\sset-name:'
+  notify: reapply netplan

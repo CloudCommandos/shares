@@ -1,0 +1,13 @@
+- name: Configure VM's Useraccount using cloudinit (Username, Password & IP address)
+  shell: "qm set {{NewVmID}} --ciuser {{NewVmUsername}} --cipassword {{NewVmPassword}} --ipconfig0 ip={{NewVmIP}}/24,gw={{GwIP}} --net0 virtio,bridge=vmbr0{{VlanTag}}"
+
+- name: copy ssh key of ansible host machine to target machine
+  copy:
+    src: sshpubkeys
+    dest: /sshkey
+
+- name: Configure VM's Useraccount using cloudinit (SSH)
+  shell: "qm set {{NewVmID}} --sshkey /sshkey"
+
+- name: Configure VM's Useraccount using cloudinit (DNS)
+  shell: "qm set {{NewVmID}} --nameserver '{{DNSIP}}' --searchdomain '{{DNSdomain}}'"

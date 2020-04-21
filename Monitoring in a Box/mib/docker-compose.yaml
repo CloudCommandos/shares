@@ -19,7 +19,7 @@ services:
     environment:
       TZ: Asia/Singapore
     ports:
-      - 127.0.0.1:9090:9090
+      - "9090:9090"
 
   alertmanager:
     restart: always
@@ -37,9 +37,7 @@ services:
     environment:
       TZ: Asia/Singapore
     ports:
-      - 127.0.0.1:9093:9093
-    networks:
-      - default
+      - "9093:9093"
 
   grafana:
     restart: always

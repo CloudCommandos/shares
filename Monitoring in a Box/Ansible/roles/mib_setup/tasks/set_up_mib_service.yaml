@@ -1,0 +1,24 @@
+- name: Create db directory for Prometheus & Grafana
+  file:
+    path: /opt/MiB/data/{{item}}
+    owner: nobody
+    group: nogroup
+    state: directory
+    recurse: yes
+  with_items:
+    - prometheus/db
+
+- name: Change Grafana config & db directory ownership
+  file:
+    path: /opt/MiB/data/grafana/{{item}}
+    owner: 472
+    group: 472
+    state: directory
+    recurse: yes
+  with_items:
+    - config
+    - db
+
+- name: Start MiB service
+  docker_compose:
+    project_src: /opt/MiB/   

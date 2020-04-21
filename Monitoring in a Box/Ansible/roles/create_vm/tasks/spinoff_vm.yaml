@@ -1,0 +1,31 @@
+# Check if VM ID is already in use
+- name: Checking existing VMs ID.
+  shell: "pvesh get /cluster/resources --type vm | awk '{print $2}'"
+  changed_when: false
+  register: IDList
+  run_once: true
+  check_mode: no
+  tags: always
+
+- name: Check if selected VM IDs are already in use.
+  debug:
+    msg:
+      - " VM ID {{ NewVmID }} has already been used "
+      - " Please look at the 'NewVmID' segment in the variable file and edit accordingly "
+  when: IDList.stdout.find(NewVmID) != -1
+  changed_when: true
+  register: IDresult
+  run_once: true
+  tags: always
+
+- meta: end_play
+  when: IDresult.changed == true
+
+# Create VMs using the Templates
+
+- name: Gathering each nodes template ID
+  shell: "qm list | grep {{TemplateName}} | awk '{print$1}'"
+  register: templateID
+
+- name: Cloning a VM using Cloud-Init template
+  shell: "qm clone {{templateID.stdout}} {{NewVmID}} --name {{NewVmName}} {{CreateFullClone}} {{AddResourcePool}} --storage {{TargetStorage}} --format {{ImageFormat}}"

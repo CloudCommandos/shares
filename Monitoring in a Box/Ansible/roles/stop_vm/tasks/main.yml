@@ -1,4 +1,0 @@
-- name: Stop VM
-  shell: "qm shutdown {{item.0}}"
-  loop: "{{ NewVmID|zip(PveNode)|list }}"
-  when: ansible_hostname == item.1

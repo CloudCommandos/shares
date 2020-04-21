@@ -1,0 +1,11 @@
+- name: Create symbolic link to prometheus targets config in backend server directory
+  file:
+    src: /opt/MiB/data/{{item.src}}
+    dest: /opt/MiB/WebGUI/backend/backend_server/scripts/{{item.dest}}
+    state: link
+    force: yes
+    follow: no
+  with_items:
+    - { src: 'prometheus/config/target.yml', dest: 'prometheus_endpoints.yml' }
+    - { src: 'prometheus/config/alerts.yml', dest: 'prometheus_rules.yml' }
+    - { src: 'alertmanager/alertmanager.yml', dest: 'alertmanager_config.yml' }

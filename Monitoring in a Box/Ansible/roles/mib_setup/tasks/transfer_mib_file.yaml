@@ -1,0 +1,7 @@
+- name: Transfer docker files into VM
+  copy:
+    src: "{{item}}"
+    dest: /opt/MiB
+  with_items:
+    - ../mib/
+    - ../WebGUI

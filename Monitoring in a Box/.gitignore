@@ -1,0 +1,5 @@
+# Ignore all .pyc file
+*.pyc
+
+# Ignore .vault file
+.vault
