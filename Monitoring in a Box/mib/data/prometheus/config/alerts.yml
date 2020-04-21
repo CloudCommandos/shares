@@ -134,7 +134,9 @@ groups:
     expr: 100 - 100 * wmi_os_physical_memory_free_bytes / wmi_cs_physical_memory_bytes > 80
     for: 10m
     labels:
-      severity: warning    annotations:      summary: "Windows Server memory load (instance {{ $labels.instance }})"
+      severity: warning
+    annotations:      
+      summary: "Windows Server memory load (instance {{ $labels.instance }})"
       message: "Memory usage is more than 80% for 10 minutes\n  VALUE = {{ humanize $value }}\n  LABELS: {{ $labels }}"
 
   - alert: windows_server_disk_storage_warning
