@@ -114,7 +114,7 @@ export default class Alertmanager_Config extends React.Component {
         this.props.setPopupState({
             popupConfirmation: {
                 show: true,
-                title: 'Proceed to apply?',
+                title: 'Proceed to save?',
                 yesCallback: this.uploadData.bind(this),
                 yesButtonValue: '',
                 noCallback: 'close',
@@ -206,7 +206,7 @@ export default class Alertmanager_Config extends React.Component {
         this.props.setPopupState({
             popupConfirmation: {
                 show: true,
-                title: 'Proceed to reload?',
+                title: 'Proceed to apply?',
                 yesCallback: this.reloadService.bind(this),
                 yesButtonValue: '',
                 noCallback: 'close',
