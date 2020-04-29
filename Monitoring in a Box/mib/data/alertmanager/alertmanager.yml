@@ -11,7 +11,7 @@ receivers:
   slack_configs:
     - channel: '#warning-alerts'
       send_resolved: true
-      api_url: 'https://hooks.slack.com/services/your-api-key'  
+      api_url: 'https://hooks.slack.com/services/your-api-key'
       username: '{{ template "slack.default.username" . }}'
       color: '{{ if eq .Status "firing" }}danger{{ else }}good{{ end }}'
       title: '{{ template "slack.default.title" . }}'
@@ -20,7 +20,4 @@ receivers:
         {{ range .Alerts }}
           *Alert:* {{ .Labels.alertname }} - `{{ .Labels.severity }}`
           *Description:* {{ .Annotations.message }}
-          *Details:*
-          {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
-          {{ end }}
         {{ end }}
