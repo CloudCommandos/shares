@@ -19,6 +19,7 @@
     - config
     - db
 
-- name: Start MiB service
-  docker_compose:
-    project_src: /opt/MiB/   
+- name: Pull required MiB service docker images
+  shell: docker-compose pull
+  args:
+    chdir: /opt/MiB/

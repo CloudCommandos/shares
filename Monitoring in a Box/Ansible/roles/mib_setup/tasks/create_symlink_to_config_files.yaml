@@ -1,13 +1,21 @@
-- name: Create symbolic link to prometheus targets config in backend server directory
+- name: Create symbolic link to MiB config files in Web GUI backend server directory
   file:
     src: /opt/MiB/data/{{item.src}}
     dest: /opt/MiB/WebGUI/backend/backend_server/scripts/{{item.dest}}
     state: link
-    owner: mib
-    group: mib
     force: yes
     follow: no
   with_items:
-    - { src: 'prometheus/config/target.yml', dest: 'prometheus_endpoints.yml' }
+    - { src: 'prometheus/config/targets.yml', dest: 'prometheus_endpoints.yml' }
     - { src: 'prometheus/config/alerts.yml', dest: 'prometheus_rules.yml' }
     - { src: 'alertmanager/alertmanager.yml', dest: 'alertmanager_config.yml' }
+
+- name: Copy MiB default configs to Web GUI draft file
+  copy:
+    src: /opt/MiB/data/{{item.src}}
+    dest: /opt/MiB/WebGUI/backend/backend_server/scripts/{{item.dest}}
+    remote_src: yes
+  with_items:
+    - { src: 'prometheus/config/targets.yml', dest: 'prometheus_endpoints_draft.yml' }
+    - { src: 'prometheus/config/alerts.yml', dest: 'prometheus_rules_draft.yml' }
+    - { src: 'alertmanager/alertmanager.yml', dest: 'alertmanager_config_draft.yml' }

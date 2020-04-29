@@ -1,5 +1,5 @@
 - name: Transfer docker files into VM
-  copy:
+  synchronize:
     src: "{{item}}"
     dest: /opt/MiB
   with_items:

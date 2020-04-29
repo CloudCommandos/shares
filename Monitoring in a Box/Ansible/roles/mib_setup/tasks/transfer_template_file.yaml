@@ -1,0 +1,5 @@
+- name: Transfer WebGui template config file into VM
+  template:
+    src: IssConfig.py
+    dest: /opt/MiB/WebGUI/backend/backend_server/IssConfig.py
+    force: yes

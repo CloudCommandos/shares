@@ -1,4 +1,23 @@
-const backend_server_url = "http://localhost:4000";
+
+const backend_server_url = extractServerUrl(window.location.href) + ":4000";
+function extractServerUrl(url) {
+    var hostname = '';
+    var protocol = 'http://';
+    //find & remove protocol (http, ftp, etc.) and get hostname
+    if (url.indexOf("//") > -1) {
+        protocol = url.split('/')[0] + "//";
+        hostname = url.split('/')[2];
+    }
+    else {
+        hostname = url.split('/')[0];
+    }
+    //find & remove port number
+    hostname = hostname.split(':')[0];
+    //find & remove "?"
+    hostname = hostname.split('?')[0];
+
+    return protocol + hostname;
+}
 
 const SETTINGS = {
     WEB_SOCKET_URL: backend_server_url,

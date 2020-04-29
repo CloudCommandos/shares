@@ -30,6 +30,12 @@
       - docker==4.2.0
       - docker-compose==1.25.4
 
+- name: enable docker.service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+
 - name: pip install webgui requirements
   pip:
     requirements: /opt/MiB/WebGUI/backend/backend_server/requirements.txt

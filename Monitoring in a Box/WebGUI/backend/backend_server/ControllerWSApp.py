@@ -18,7 +18,7 @@ class ControllerWSApp:
 
     def handleWebRequest(self, incoming_msg):
         try:
-            logger.info('handleWebReq: %s' % str(incoming_msg))
+            #logger.info('handleWebReq: %s' % str(incoming_msg))
             if incoming_msg['id'] == self.jmf.ID_MAP['REQ_WS_LOGIN']:
                 response = self.process_req_ws_login(incoming_msg)
             elif incoming_msg['id'] == self.jmf.ID_MAP['REQ_WS_LOGOUT']:
@@ -317,7 +317,7 @@ class ControllerWSApp:
         #print(filepath)
         if (os.path.exists(filepath)):
             # for linux
-            status = subprocess.run([str(filepath)]).returncode
+            status = subprocess.call(['/bin/bash', str(filepath)])
 
             # for windows
             #status = subprocess.call(['C:\\cygwin64\\bin\\bash.exe', '-l', str(filepath)])

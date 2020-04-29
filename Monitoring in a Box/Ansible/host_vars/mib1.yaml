@@ -1,0 +1,33 @@
+### VM variables
+## Which image format to use
+# qcow2
+# vmdk
+# raw
+ImageFormat: vmdk
+
+## New VM ID number
+NewVmID: "240"
+
+## New VM name
+NewVmName: "MiB-Host"
+
+## New account username
+NewVmUsername: mib
+
+## VM's IP address
+NewVmIP: 10.0.1.240
+
+## VM's password
+NewVmPassword: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          66303732383361623566353364393332373239653137346666653066643535366566636538613734
+          6132393531316334373433336262373563626566613463360a656136316132343339326662636363
+          65393062646665653361306631313533323437633631646633396262366335386635636664366664
+          6236346539666532660a666465393738663664386335386366313664646463396365383761323735
+          3431
+
+# SSH VM username
+ansible_user: "{{NewVmUsername}}"
+
+# SSH VM IP address
+ansible_host: "{{NewVmIP}}"

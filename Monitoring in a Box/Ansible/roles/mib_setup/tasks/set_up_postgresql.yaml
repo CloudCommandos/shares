@@ -7,7 +7,7 @@
   postgresql_user:
     db: mib
     name: postgres
-    password: 12345
+    password: "{{DBpass}}"
   become_user: postgres
 
 - name: create mib account on webgui

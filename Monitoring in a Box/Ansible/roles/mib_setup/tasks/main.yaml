@@ -1,14 +1,17 @@
 - name: Transfer MiB files to vm
   import_tasks: transfer_mib_file.yaml
 
-- name: Install dependencies on vm
-  import_tasks: install_dependencies.yaml
+- name: Transfer WebGui template config file to vm
+  import_tasks: transfer_template_file.yaml
 
 - name: Create symbolic link to MiB config files
   import_tasks: create_symlink_to_config_files.yaml
 
 - name: Remove unnecessary config from network config file
   import_tasks: remove_netconfig_macaddress_dependency.yaml
+
+- name: Install dependencies on vm
+  import_tasks: install_dependencies.yaml
 
 - name: Set up postgres db
   import_tasks: set_up_postgresql.yaml
@@ -18,3 +21,9 @@
 
 - name: Set up MiB service
   import_tasks: set_up_mib_service.yaml
+
+- name: Add end user's ssh public key to MiB VM
+  import_tasks: add_end_user_sshpubkey.yaml
+
+- name: Set MiB password to expired
+  import_tasks: set_expire_password.yaml
