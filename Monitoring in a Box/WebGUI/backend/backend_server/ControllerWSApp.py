@@ -303,8 +303,10 @@ class ControllerWSApp:
 
         # Determine script to run
         filename = ''
-        if (service_name == 'reload_prometheus'):
-            filename = 'reload_prometheus.sh';
+        if (service_name == 'reload_prometheus_endpoints'):
+            filename = 'reload_prometheus_endpoints.sh';
+        elif (service_name == 'reload_prometheus_rules'):
+            filename = 'reload_prometheus_rules.sh';
         elif (service_name == 'reload_alertmanager'):
             filename = 'reload_alertmanager.sh';
 

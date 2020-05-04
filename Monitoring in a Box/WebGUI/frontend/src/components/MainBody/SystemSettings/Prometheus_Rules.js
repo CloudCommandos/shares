@@ -220,7 +220,7 @@ export default class Prometheus_Rules extends React.Component {
     reloadService(){
         let payload = {
             session_key: window.localStorage['session_key'],
-            service_name: 'reload_prometheus',
+            service_name: 'reload_prometheus_rules',
         }
         let context = this;
 

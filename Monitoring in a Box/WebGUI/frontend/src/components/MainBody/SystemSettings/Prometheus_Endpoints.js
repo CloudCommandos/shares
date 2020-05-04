@@ -220,7 +220,7 @@ export default class Prometheus_Endpoints extends React.Component {
     reloadService(){
         let payload = {
             session_key: window.localStorage['session_key'],
-            service_name: 'reload_prometheus',
+            service_name: 'reload_prometheus_endpoints',
         }
         let context = this;
 
