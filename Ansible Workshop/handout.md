@@ -22,9 +22,9 @@ sudo apt install ansible
 
 1. Run PuTTY and start a session with the following settings:  
 
-    *  Host Name: 111.223.106.169
+    *  Host Name: ***
 
-    *  Port: 20210
+    *  Port: ***
 
     *  Connection type: SSH  
 
