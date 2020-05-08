@@ -55,7 +55,7 @@ sudo apt install ansible
 1. SSH to the target VM (replace 'X' with the number assigned to you). Password is the same as the username.
 
     ```bash
-    ssh userX@111.223.106.169 -p 20210
+    ssh userX@<host ip> -p <host port>
     ```
 
 <div style="page-break-after: always;"></div>
