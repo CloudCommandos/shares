@@ -65,8 +65,8 @@ sudo apt install ansible
 Before the start of the hands-on exercise, run the following command to create the `ansible-workshop` directory to work in (Replace 'X' with the number assigned to you):
 
 ```bash
-mkdir /home/userX/ansible-workshop
-cd /home/userX/ansible-workshop
+mkdir ansible-workshop
+cd ansible-workshop
 ```
 
 ### 3.1 Exercise 1 - Introduction to Ansible
