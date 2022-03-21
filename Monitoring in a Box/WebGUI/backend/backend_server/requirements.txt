@@ -1,5 +1,5 @@
 psycopg2==2.8.2
 Flask==1.1.1
 flask-cors==3.0.8
-waitress==1.4.3
+waitress==2.1.1
 flask-socketio==4.2.1
